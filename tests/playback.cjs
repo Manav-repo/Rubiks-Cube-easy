@@ -23,7 +23,7 @@ for(const face of 'URFDLB')for(const suffix of ['',"'",'2']){
  const promise=run(`view.turn(cube,${JSON.stringify(move)},{playback:true})`);
  assert.equal(run('view.busy'),true);assert.equal(run('cube.asString()'),before);assert.equal(animations.length,0);
  assert.equal(nodes.filter(n=>n.classes.has('turning')).length,21);
- const arrow=ctx.host.children.find(n=>n.className==='turn-direction');assert.ok(arrow);assert.equal(arrow.innerHTML.includes('scale(-1 1)'),suffix==="'");
+ const arrow=ctx.host.children.find(n=>n.className==='turn-direction');assert.ok(arrow);assert.equal(arrow.innerHTML.includes('M 91 76'),suffix==="'");assert.equal(arrow.innerHTML.includes('scale('),false);
  await tick(275);const a=animations.shift();assert.equal(a.options.duration,800);assert.equal(a.options.easing,'ease-in-out');
  const [,axis,degrees]=a.frames[1].transform.match(/rotate([XYZ])\((-?\d+)deg\)/);assert.equal(a.frames[0].transform,`rotate${axis}(0deg)`);
  // Rotate actual source surfaces and look up their destination slots. This

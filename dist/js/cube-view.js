@@ -40,7 +40,9 @@ class CubeView {
   if(facing<.45){[this.x,this.y]={U:[-65,-25],D:[65,-25],R:[-20,-65],L:[-20,65],F:[-25,-25],B:[-25,155]}[m[0]];this.orient();}
   const rotation={U:'rotateX(90deg)',D:'rotateX(-90deg)',R:'rotateY(90deg)',L:'rotateY(-90deg)',F:'rotateY(0deg)',B:'rotateY(180deg)'}[m[0]];
   const arrow=document.createElement('div');arrow.className='turn-direction';arrow.setAttribute('aria-hidden','true');arrow.style.transform=`${rotation} translateZ(99px)`;
-  const path='M 29 76 A 33 33 0 1 1 85 50 M 74 41 L 85 50 L 94 38';arrow.innerHTML=`<svg viewBox="0 0 120 120"><g${m.endsWith("'")?' transform="translate(120 0) scale(-1 1)"':''}><path class="arrow-border" d="${path}"/><path class="arrow-line" d="${path}"/></g><text x="60" y="66">${m.endsWith('2')?'180°':'90°'}</text></svg>`;this.el.append(arrow);return arrow;
+  // Keep a separate counterclockwise path instead of mirroring with CSS
+  // scale; the playback contains rotation only, never a scale animation.
+  const path=m.endsWith("'")?'M 91 76 A 33 33 0 1 0 35 50 M 46 41 L 35 50 L 26 38':'M 29 76 A 33 33 0 1 1 85 50 M 74 41 L 85 50 L 94 38';arrow.innerHTML=`<svg viewBox="0 0 120 120"><path class="arrow-border" d="${path}"/><path class="arrow-line" d="${path}"/><text x="60" y="66">${m.endsWith('2')?'180°':'90°'}</text></svg>`;this.el.append(arrow);return arrow;
  }
  async turn(c,m,{playback=false,slow=false}={}){
   if(this.busy)return false;this.busy=true;this.drag=null;
