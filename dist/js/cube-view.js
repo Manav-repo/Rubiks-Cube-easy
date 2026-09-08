@@ -34,10 +34,28 @@ class CubeView {
  render(c,highlight=[]){const str=c.asString();const names=this.names||CubeLayout.names(null);this.nodes.forEach(n=>{n.style.setProperty('--sticker',`var(--${str[n.index]})`);n.querySelector('span').textContent=names[str[n.index]][0];n.setAttribute('aria-label',`${names[str[n.index]]} sticker, ${n.face} face`);n.classList.toggle('highlight',highlight.includes(n.index));});}
  faceForNormal(n){return {"0,1,0":'U',"1,0,0":'R',"0,0,1":'F',"0,-1,0":'D',"-1,0,0":'L',"0,0,-1":'B'}[n.join(',')];}
  rotate(v,axis,angle){const c=Math.round(Math.cos(angle*Math.PI/180)),s=Math.round(Math.sin(angle*Math.PI/180));const [x,y,z]=v;return axis==='X'?[x,y*c-z*s,y*s+z*c]:axis==='Y'?[x*c+z*s,y,-x*s+z*c]:[x*c-y*s,x*s+y*c,z];}
- showDirection(m){
+ orientation(x=this.x,y=this.y){return `rotateX(${x}deg) rotateY(${y}deg)`;}
+ cameraTarget(m){
   const normals={U:[0,1,0],D:[0,-1,0],R:[1,0,0],L:[-1,0,0],F:[0,0,1],B:[0,0,-1]},normal=normals[m[0]],x=this.x*Math.PI/180,y=this.y*Math.PI/180;
   const facing=normal[1]*Math.sin(x)+(-normal[0]*Math.sin(y)+normal[2]*Math.cos(y))*Math.cos(x);
-  if(facing<.45){[this.x,this.y]={U:[-65,-25],D:[65,-25],R:[-20,-65],L:[-20,65],F:[-25,-25],B:[-25,155]}[m[0]];this.orient();}
+  const target=facing<.45?({U:[-65,-25],D:[65,-25],R:[-20,-65],L:[-20,65],F:[-25,-25],B:[-25,155]}[m[0]]):null;
+  return target&& (Math.abs(target[0]-this.x)>0.5||Math.abs(target[1]-this.y)>0.5)?target:null;
+ }
+ panToMove(m,{slow=false}={}){
+  const target=this.cameraTarget(m);if(!target)return;
+  const [x,y]=target,reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,duration=slow?1000:500,wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+  if(reduced){this.x=x;this.y=y;this.orient();return;}
+  return (async()=>{
+   const from=this.orientation(),to=this.orientation(x,y),easing='ease-in-out';let animation;
+   try{
+    if(typeof this.el.animate==='function'){animation=this.el.animate([{transform:from},{transform:to}],{duration,easing,fill:'forwards'});await animation.finished;}
+    else{this.el.style.transition=`transform ${duration}ms ${easing}`;this.el.style.transform=to;await wait(duration);}
+   }finally{
+    this.x=x;this.y=y;this.orient();if(animation)animation.cancel();this.el.style.transition='';
+   }
+  })();
+ }
+ showDirection(m){
   const rotation={U:'rotateX(90deg)',D:'rotateX(-90deg)',R:'rotateY(90deg)',L:'rotateY(-90deg)',F:'rotateY(0deg)',B:'rotateY(180deg)'}[m[0]];
   const arrow=document.createElement('div');arrow.className='turn-direction';arrow.setAttribute('aria-hidden','true');arrow.style.transform=`${rotation} translateZ(99px)`;
   // Keep a separate counterclockwise path instead of mirroring with CSS
@@ -49,7 +67,7 @@ class CubeView {
   const data={U:['Y',1,-1],D:['Y',-1,1],R:['X',1,-1],L:['X',-1,1],F:['Z',1,-1],B:['Z',-1,1]}[m[0]],axis=data[0],layer=data[1],sign=data[2];
   const amount=m.endsWith("'")?-90:m.endsWith('2')?180:90,angle=-sign*amount*(axis==='Y'?-1:1),axisNumber={X:0,Y:1,Z:2}[axis];
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,duration=playback?(slow?1600:800):210,wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-  const turningCubies=this.cubies.filter(g=>g.pos[axisNumber]===layer),turningNodes=turningCubies.flatMap(g=>[...g.children]);const arrow=playback?this.showDirection(m):null;let animation;
+  const turningCubies=this.cubies.filter(g=>g.pos[axisNumber]===layer),turningNodes=turningCubies.flatMap(g=>[...g.children]);const pan=playback?this.panToMove(m,{slow}):null;if(pan)await pan;const arrow=playback?this.showDirection(m):null;let animation;
   try{
    turningNodes.forEach(n=>n.classList.add('turning'));await wait(playback?275:reduced?110:70);turningCubies.forEach(g=>this.turnLayer.append(g));
    if(!reduced){const from=`rotate${axis}(0deg)`,to=`rotate${axis}(${angle}deg)`,easing=playback?'ease-in-out':'cubic-bezier(.22,.8,.25,1)';
