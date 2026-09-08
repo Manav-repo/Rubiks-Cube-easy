@@ -65,3 +65,8 @@ body.playback .painter-actions button{min-width:140px}
  body.playback #solution-caption{font-size:16px}
  body.playback .solution-token{font-size:13px;padding:7px 8px}
 }
+
+/* Move-list entries are real controls so every selected move uses the same playback path. */
+.solution-token{border:1px solid transparent;min-height:0;padding:7px 10px}
+.solution-token:hover:not(:disabled){background:var(--soft);border-color:var(--line)}
+.solution-token:disabled{opacity:.45}
