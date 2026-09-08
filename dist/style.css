@@ -66,6 +66,23 @@ body.playback .painter-actions button{min-width:140px}
  body.playback .solution-token{font-size:13px;padding:7px 8px}
 }
 
+/* Keep an escape hatch visible after a saved Fix My Cube session resumes. */
+body.playback .intro{display:flex;justify-content:flex-end;align-items:center;min-height:44px;margin:10px 0 12px}
+body.playback .intro>div:first-child{display:none}
+body.playback .intro .mode-switch{margin:0;padding:3px}
+body.playback .intro .mode-switch button{min-height:40px;padding:9px 15px;font-size:13px}
+body.playback .app-layout{height:calc(100dvh - 240px);min-height:460px}
+body.playback footer{display:flex!important;position:fixed;left:0;right:0;bottom:0;z-index:55;justify-content:center;gap:18px;margin:0;padding:6px 5%;background:var(--paper);border-top:1px solid var(--line)}
+body.playback footer>span,body.playback footer .support-qr{display:none}
+body.playback footer #support-links{display:flex}
+@media(max-width:680px){
+ body.playback .intro{justify-content:stretch;margin:8px 0}
+ body.playback .intro .mode-switch{width:100%}
+ body.playback .intro .mode-switch button{flex:1}
+ body.playback .app-layout{height:auto;min-height:0;padding-bottom:56px}
+ body.playback footer{padding:4px 5%}
+}
+
 /* Move-list entries are real controls so every selected move uses the same playback path. */
 .solution-token{border:1px solid transparent;min-height:0;padding:7px 10px}
 .solution-token:hover:not(:disabled){background:var(--soft);border-color:var(--line)}
