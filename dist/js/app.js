@@ -100,7 +100,8 @@ $('solve').onclick=()=>{if(solving||animating)return;if(!state.layout){pendingSo
 function replayAvailable(){const r=state.lastPlayback;return !!(r&&/^[URFDLB][2']?$/.test(r.move)&&r.after===fixCube.asString()&&!validate(r.before)&&Cube.fromString(r.before).move(r.move).asString()===r.after);}
 function renderSolution(){
  const has=state.solution.length>0;$('solution-controls').hidden=!has;if(!has)return;
- $('solution-progress').innerHTML=state.solution.map((m,i)=>`<span class="solution-token ${i<state.step?'done':i===state.step?'current':''}">${m}</span>`).join('');
+ $('solution-progress').innerHTML=state.solution.map((m,i)=>`<button type="button" class="solution-token ${i<state.step?'done':i===state.step?'current':''}" data-solution-index="${i}" aria-label="Play move ${i+1}: ${m}" ${animating?'disabled':''}>${m}</button>`).join('');
+ document.querySelectorAll('[data-solution-index]').forEach(b=>b.onclick=()=>playListedMove(+b.dataset.solutionIndex));
  const current=activePlayback;
  $('solution-caption').textContent=current?`${current.replay?'Replay':current.back?'Undo':'Watch'} ${current.move} · ${caption(current.move)}`:state.step===state.solution.length?'All six faces match. Nice work!':`Next: move ${state.step+1} of ${state.solution.length} · ${state.solution[state.step]} · ${caption(state.solution[state.step])}`;
  $('solution-back').disabled=state.step===0||animating;
@@ -114,17 +115,28 @@ async function playTurn(move,{back=false,replay=false}={}){
  if(animating||solving)return;
  if(!state.layout){openCalibration();return;}
  const before=replay?state.lastPlayback.before:fixCube.asString();
+ const replayAfter=replay?Cube.fromString(state.lastPlayback.after):null;
  const target=replay?Cube.fromString(before):fixCube;
  animating=true;activePlayback={move,back,replay};renderSolution();renderObjective();
  $('playback-status').textContent=`${replay?'Replaying':'Watch'} ${move}: ${faceNames[move[0]]} face. ${move.endsWith('2')?'Half a turn':move.endsWith("'")?'Counterclockwise':'Clockwise'}, looking at that face.`;
  try{
+ if(replay){fixCube=target;view.render(fixCube);}
  if(await view.turn(target,move,{playback:true,slow:state.playbackSpeed==='slow'})===false)return;
- if(!replay){state.step+=back?-1:1;state.fixCount=state.step;state.lastPlayback={before,after:fixCube.asString(),move};}
+ if(replay){fixCube=replayAfter;}
+ else{state.step+=back?-1:1;state.fixCount=state.step;state.lastPlayback={before,after:fixCube.asString(),move};}
  $('playback-status').textContent=`${replay?'Replayed':back?'Undid':'Made'} ${move}. ${replay?'Your place is unchanged.':'Copy this on your real cube. Replay if you need another look.'}`;
  }catch(e){$('playback-status').textContent='That turn was interrupted. Try it again.';}
  finally{animating=false;activePlayback=null;view.render(fixCube);render();}
 }
 async function solverStep(back){if(animating||solving)return;const m=back?state.solution[state.step-1]:state.solution[state.step];if(m)await playTurn(back?inverse(m):m,{back});}
+async function playListedMove(index){
+ if(animating||solving||index<0||index>=state.solution.length)return;
+ if(index!==state.step){
+  const base=Cube.fromString(state.paint);if(index)base.move(state.solution.slice(0,index).join(' '));
+  fixCube=base;state.step=index;state.fixCount=index;state.lastPlayback=null;view.render(fixCube);render();
+ }
+ await playTurn(state.solution[index]);
+}
 async function replayMove(){if(animating||solving||!replayAvailable())return;await playTurn(state.lastPlayback.move,{replay:true});}
 $('solution-back').onclick=()=>solverStep(true);$('solution-next').onclick=()=>solverStep(false);
 $('solution-replay').onclick=replayMove;
