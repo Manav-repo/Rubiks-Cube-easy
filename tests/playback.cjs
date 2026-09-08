@@ -13,15 +13,19 @@ const ctx=vm.createContext({console,document:{createElement:()=>new Element()},w
 ctx.window=ctx;ctx.addEventListener=()=>{};
 for(const f of ['vendor/cube.js','js/layout.js','js/cube-view.js'])vm.runInContext(fs.readFileSync('dist/'+f,'utf8'),ctx);
 const run=s=>vm.runInContext(s,ctx);ctx.host=new Element();ctx.host.parentElement=new Element();run('var view=new CubeView(host,()=>{});var cube=new Cube().move("R U F2 L D B");');
-const flush=async()=>{await Promise.resolve();await Promise.resolve();};
+const flush=async()=>{for(let i=0;i<6;i++)await Promise.resolve();};
 async function tick(ms){const t=timers.shift();assert.equal(t.ms,ms);t.f();await flush();}
 const normals={U:[0,-1,0],R:[1,0,0],F:[0,0,1],D:[0,1,0],L:[-1,0,0],B:[0,0,-1]};
 function rotate(v,axis,angle){const c=Math.round(Math.cos(angle)),s=Math.round(Math.sin(angle));const [x,y,z]=v;return axis==='X'?[x,y*c-z*s,y*s+z*c]:axis==='Y'?[x*c+z*s,y,-x*s+z*c]:[x*c-y*s,x*s+y*c,z];}
 (async()=>{
+let cameraPans=0;
 for(const face of 'URFDLB')for(const suffix of ['',"'",'2']){
  const move=face+suffix,before=run('cube.asString()'),nodes=run('view.nodes');
  const promise=run(`view.turn(cube,${JSON.stringify(move)},{playback:true})`);
- assert.equal(run('view.busy'),true);assert.equal(run('cube.asString()'),before);assert.equal(animations.length,0);
+  assert.equal(run('view.busy'),true);assert.equal(run('cube.asString()'),before);
+ // A hidden face is brought into view first. The camera pan is its own
+ // eased rotation and must finish before any turning sticker is highlighted.
+ if(animations.length){assert.equal(nodes.filter(n=>n.classes.has('turning')).length,0);const camera=animations.shift();cameraPans++;assert.equal(camera.options.duration,500);assert.equal(camera.options.easing,'ease-in-out');assert.match(camera.frames[0].transform,/^rotateX\(-?\d+deg\) rotateY\(-?\d+deg\)$/);assert.match(camera.frames[1].transform,/^rotateX\(-?\d+deg\) rotateY\(-?\d+deg\)$/);camera.finish();await flush();}
  assert.equal(nodes.filter(n=>n.classes.has('turning')).length,21);
  const arrow=ctx.host.children.find(n=>n.className==='turn-direction');assert.ok(arrow);assert.equal(arrow.innerHTML.includes('M 91 76'),suffix==="'");assert.equal(arrow.innerHTML.includes('scale('),false);
  await tick(275);const a=animations.shift();assert.equal(a.options.duration,800);assert.equal(a.options.easing,'ease-in-out');
@@ -34,7 +38,8 @@ for(const face of 'URFDLB')for(const suffix of ['',"'",'2']){
  a.finish();await flush();assert.equal(run('view.busy'),true);assert.equal(run('cube.asString()'),before);assert.ok(arrow.parentElement);
  await tick(275);await promise;assert.equal(run('cube.asString()'),expected.join(''));assert.equal(run('cube.asString()'),run(`Cube.fromString(${JSON.stringify(before)}).move(${JSON.stringify(move)}).asString()`));assert.equal(run('view.busy'),false);assert.equal(arrow.parentElement,null);assert.equal(run('view.turnLayer.children.length'),0);
 }
-let p=run('view.turn(cube,"R",{playback:true,slow:true})');await tick(275);assert.equal(animations[0].options.duration,1600);animations.shift().finish();await flush();await tick(275);await p;
+assert.ok(cameraPans>0);
+let p=run('view.turn(cube,"R",{playback:true,slow:true})');if(animations.length){const camera=animations.shift();assert.equal(camera.options.duration,1000);assert.equal(camera.options.easing,'ease-in-out');camera.finish();await flush();}await tick(275);assert.equal(animations[0].options.duration,1600);animations.shift().finish();await flush();await tick(275);await p;
 reduced=true;p=run('view.turn(cube,"B2",{playback:true})');await tick(275);assert.equal(animations.length,0);assert.ok(run('view.turnLayer.style.transform').includes('-180deg'));assert.equal(run('view.busy'),true);await tick(275);await p;
 reduced=false;p=run('view.turn(cube,"U")');await tick(70);assert.equal(animations[0].options.duration,210);animations.shift().finish();await flush();await tick(0);await p;
 console.log('18 moves match cubejs geometry; before/after holds, arrow direction, slow speed, reduced motion and Learn timing passed.');
