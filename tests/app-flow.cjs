@@ -33,5 +33,18 @@ run("$('next-stage').onclick()");check("state.stage===2 && state.whole && state.
 run("save();globalThis.before=state.cube;$('scramble').onclick()");check("state.phase==='free'");run("$('return-task').onclick()");check("cube.asString()===before && state.phase==='predict'");
 // Painter edits clear a stale solution and previous solver position.
 run("state.solution=['R'];state.step=1;invalidateSolution()");check('state.solution.length===0 && state.step===0');
+// Follow-along replay repeats the last actual turn, including an undo.
+run("state.mode='fix';state.layout='red-right';state.solution=['R', \"U'\", 'B2'];state.step=0;fixCube=new Cube();render()");
+check("$('solution-replay').disabled");
+await run('solverStep(false)');check("state.step===1 && state.lastPlayback.move==='R'");
+run('globalThis.after=fixCube.asString()');await run('replayMove()');check('state.step===1 && state.fixCount===1 && fixCube.asString()===after');
+await run('solverStep(true)');check('state.step===0 && fixCube.isSolved()');
+check("state.lastPlayback.move===\"R'\"");await run('replayMove()');check('state.step===0 && fixCube.isSolved()');
+// A pending turn holds both navigation paths and replay. Extra taps are ignored.
+run("view.turn=async(c,m)=>{await new Promise(r=>globalThis.release=r);c.move(m)}");
+const pending=run('solverStep(false)');check("animating && $('solution-next').disabled && $('solution-back').disabled && $('solution-replay').disabled && $('objective-action').disabled");
+await run('solverStep(false)');await run('solverStep(true)');await run('replayMove()');check('state.step===0');run('release()');await pending;check('state.step===1 && !animating');
+run("$('playback-speed').value='slow';$('playback-speed').onchange()");check("JSON.parse(localStorage.getItem('cube-brainiac-v1')).playbackSpeed==='slow'");
+run('invalidateSolution()');check('state.lastPlayback===null');
 check("JSON.parse(localStorage.getItem('cube-brainiac-v1')).version===1");console.log(`${checks} application state checks passed.`);
 })().catch(e=>{console.error(e);process.exitCode=1});

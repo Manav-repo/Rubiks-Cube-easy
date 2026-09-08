@@ -21,6 +21,18 @@ dialog{color:var(--ink);background:var(--surface);border:1px solid var(--line);b
 /* Playback is a follow-along surface: keep the real 3D cube beside the
    independently scrolling move panel, and remove the input net entirely. */
 .turn-layer{position:absolute;inset:0;transform-style:preserve-3d;transform-origin:50% 50% 0;pointer-events:none}
+.cubie{position:absolute;inset:0;transform-style:preserve-3d;transform-origin:50% 50% 0;pointer-events:none}
+.turn-direction{position:absolute;width:124px;height:124px;left:31px;top:31px;backface-visibility:hidden;pointer-events:none}
+.turn-direction svg{width:100%;height:100%;overflow:visible}
+.turn-direction path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.turn-direction .arrow-border{stroke:#102038;stroke-width:12px}
+.turn-direction .arrow-line{stroke:#fffef5;stroke-width:5px}
+.turn-direction text{font:800 21px system-ui,sans-serif;text-anchor:middle;fill:#fffef5;stroke:#102038;stroke-width:5px;paint-order:stroke fill}
+.playback-options{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}
+.playback-options label{display:flex;gap:8px;align-items:center;font-size:14px}
+#playback-speed{font:inherit;color:var(--ink);background:var(--button);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:44px}
+#playback-speed:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+#playback-status{font-size:14px;line-height:1.5;color:var(--muted);min-height:3em}
 .sticker.turning{outline:4px solid var(--focus);outline-offset:2px;box-shadow:0 0 0 7px #8ebcff66,inset 0 0 0 1px #ffffff55;filter:brightness(1.13)}
 :root[data-theme=dark]{--paper:#101b2b;--ink:#edf3ff;--muted:#afbed4;--line:#40516a;--surface:#18263a;--panel:#152338;--soft:#223554;--button:#20324d;--hint:#243956;--selected:#29456c;--dark:#8ebcff;--primary:#8ebcff;--on-primary:#102038;--green:#8ebcff;--focus:#a9c9ff;--unpainted:#435269;--dot:#344865}
 :root[data-theme=dark] #progress{background:#6f9bdc}

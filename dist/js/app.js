@@ -5,9 +5,9 @@
 const $=id=>document.getElementById(id);
 const {lessons,goals,inverse,validate,caption}=CubeLessons;
 const faces='URFDLB',colorNames=CubeLayout.names(null),faceNames={U:'Top',R:'Right',F:'Front',D:'Bottom',L:'Left',B:'Back'};
-let state={version:1,mode:'learn',stage:0,unlocked:0,completed:[],drill:0,phase:'predict',attempted:false,hint:0,history:[],cube:new Cube().asString(),start:new Cube().asString(),plan:[],count:0,seen:[],recall:false,variant:0,paint:CubeLayout.blank(),layout:null,calibrationSkipped:false,symbols:false,accessible:false,solution:[],step:0,fixCube:new Cube().asString(),fixCount:0,learned:{}};
+let state={version:1,mode:'learn',stage:0,unlocked:0,completed:[],drill:0,phase:'predict',attempted:false,hint:0,history:[],cube:new Cube().asString(),start:new Cube().asString(),plan:[],count:0,seen:[],recall:false,variant:0,paint:CubeLayout.blank(),layout:null,calibrationSkipped:false,symbols:false,accessible:false,solution:[],step:0,fixCube:new Cube().asString(),fixCount:0,playbackSpeed:'normal',lastPlayback:null,learned:{}};
 let plannerWorker=null,planning=false,pendingSolve=false;
-let cube=new Cube(),fixCube=new Cube(),paintColor='U',feedback='',hintPlan=[],worker=null,solving=false,solverTimer=null,animating=false;
+let cube=new Cube(),fixCube=new Cube(),paintColor='U',feedback='',hintPlan=[],worker=null,solving=false,solverTimer=null,animating=false,activePlayback=null;
 try{const saved=JSON.parse(localStorage.getItem('cube-brainiac-v1'));if(saved?.version===1 && Number.isInteger(saved.stage)&&saved.stage>=0&&saved.stage<7&&!validate(saved.cube)&&!validate(saved.start)){state={...state,...saved};state.completed=state.completed.filter(n=>Number.isInteger(n)&&n>=0&&n<7);state.unlocked=Math.min(6,Math.max(0,state.unlocked));if(!Array.isArray(state.solution)||state.solution.some(m=>!/^([URFDLB])([2']?)$/.test(m)))state.solution=[];if(validate(state.fixCube))state.fixCube=new Cube().asString();if(typeof state.paint!=='string'||!/^[URFDLB?]{54}$/.test(state.paint))state.paint=CubeLayout.blank();}}catch(e){/* Storage may be unavailable or an old save may be incomplete. */}
 cube=Cube.fromString(state.cube);fixCube=Cube.fromString(state.fixCube);
 const view=new CubeView($('cube'),pickSticker);
@@ -20,7 +20,7 @@ function render(){
  syncThemeButton();
  document.body.classList.toggle('fix',state.mode==='fix');document.body.classList.toggle('playback',state.mode==='fix'&&state.solution.length>0);document.body.classList.toggle('symbols',state.symbols||state.accessible);document.body.classList.toggle('accessible',state.accessible);
  $('painter-title').textContent=state.mode==='fix'&&state.solution.length?'Follow the move.':'Paint your puzzle.';
- $('painter-intro').textContent=state.mode==='fix'&&state.solution.length?'Keep the screen cube and your real cube in the same position. Make one turn, then tap Next move.':'Keep yellow on top and green in front. Pick a color, then tap a square. Centers stay put.';
+ $('painter-intro').textContent=state.mode==='fix'&&state.solution.length?'Watch, then copy. Hidden faces come into view. Move names stay fixed.':'Keep yellow on top and green in front. Pick a color, then tap a square. Centers stay put.';
  $('symbols').checked=state.symbols;$('accessible').checked=state.accessible;
  ['learn','fix'].forEach(m=>{$(m+'-mode').classList.toggle('active',state.mode===m);$(m+'-mode').setAttribute('aria-pressed',state.mode===m);});
  $('painter').hidden=state.mode!=='fix';$('stage-label').textContent=state.mode==='fix'?'FIX MY CUBE · FOLLOW ALONG':`STAGE 0${state.stage+1} · ${state.recall?'FROM MEMORY':lessons[state.stage].tag}`;
@@ -90,15 +90,45 @@ $('reset-view').onclick=()=>view.reset();
 $('settings-toggle').onclick=()=>{$('settings').hidden=!$('settings').hidden;$('settings-toggle').setAttribute('aria-expanded',!$('settings').hidden);};
 ['symbols','accessible'].forEach(id=>$(id).onchange=()=>{state[id]=$(id).checked;render();});
 function renderPalette(){const counts=Object.fromEntries([...faces].map(f=>[f,[...state.paint].filter(c=>c===f).length]));$('palette').innerHTML=[...faces].map(f=>`<button data-color="${f}" class="${paintColor===f?'selected':''}" aria-pressed="${paintColor===f}" style="--sticker:var(--${f})">${colorNames[f]}<br>${counts[f]}/9</button>`).join('');document.querySelectorAll('[data-color]').forEach(b=>b.onclick=()=>{paintColor=b.dataset.color;renderPalette();});}
-function invalidateSolution(){if(worker){worker.terminate();worker=null;}clearTimeout(solverTimer);solving=false;state.solution=[];state.step=0;state.fixCount=0;fixCube=new Cube();$('solver-message').textContent='';$('solve').disabled=false;}
+function invalidateSolution(){if(worker){worker.terminate();worker=null;}clearTimeout(solverTimer);solving=false;state.solution=[];state.step=0;state.fixCount=0;state.lastPlayback=null;fixCube=new Cube();$('solver-message').textContent='';$('solve').disabled=false;}
 function renderNet(){$('cube-net').innerHTML=[...faces].map((f,j)=>`<div class="net-face" data-face="${f}" role="group" aria-label="${faceNames[f]} face">${Array.from({length:9},(_,i)=>{const c=state.paint[j*9+i];return `<button data-paint="${j*9+i}" style="--sticker:${c==='?'?'var(--unpainted)':`var(--${c})`}" ${i===4?'disabled':''} aria-label="${faceNames[f]}, row ${Math.floor(i/3)+1}, column ${i%3+1}, ${colorNames[c]||'not painted'}">${i===4?f:c==='?'?'·':state.symbols||state.accessible?colorNames[c][0]:''}</button>`;}).join('')}</div>`).join('');document.querySelectorAll('[data-paint]').forEach(b=>b.onclick=()=>{if(animating||planning)return;invalidateSolution();const a=[...state.paint];a[+b.dataset.paint]=paintColor;state.paint=a.join('');render();});}
 $('paint-reset').onclick=()=>{if(animating||planning)return;invalidateSolution();state.paint=CubeLayout.blank();render();};
 $('paint-demo').onclick=()=>{if(animating||planning)return;invalidateSolution();state.paint=new Cube().move(randomTurns(20)).asString();render();};
 $('solve').onclick=()=>{if(solving||animating)return;if(!state.layout){pendingSolve=true;openCalibration();return;}if(state.paint.includes('?')){$('solver-message').textContent='Paint the empty squares first. You’re getting there!';return;}const problem=validate(state.paint);if(problem){$('solver-message').textContent='Hmm, '+problem[0].toLowerCase()+problem.slice(1);return;}invalidateSolution();fixCube=Cube.fromString(state.paint);view.reset();render();if(fixCube.isSolved()){$('solver-message').textContent='Every face matches already. Your cube is solved!';return;}solving=true;renderObjective();$('solve').disabled=true;$('solver-message').textContent='Thinking through your cube… You can still look around.';
  try{worker=new Worker('js/solver-worker.js');worker.onmessage=e=>{if(e.data.status==='preparing'){$('solver-message').textContent='Warming up my puzzle brain. The first solve takes a moment…';return;}clearTimeout(solverTimer);solving=false;renderObjective();$('solve').disabled=false;if(e.data.error){$('solver-message').textContent=e.data.error;return;}state.solution=e.data.solution.split(/\s+/).filter(Boolean);state.step=0;$('solver-message').textContent=`Found a path in ${state.solution.length} moves. Let’s take them one at a time.`;render();};worker.onerror=()=>{clearTimeout(solverTimer);solving=false;renderObjective();$('solve').disabled=false;$('solver-message').textContent='My puzzle brain could not load. Refresh the page and try again.';};solverTimer=setTimeout(()=>{worker.terminate();solving=false;renderObjective();$('solve').disabled=false;$('solver-message').textContent='That took longer than expected. Try again, or use a newer browser.';},120000);worker.postMessage(state.paint);}catch(e){solving=false;renderObjective();$('solve').disabled=false;$('solver-message').textContent='The solver needs a web server. Open the published game instead of double-clicking the file.';}};
-function renderSolution(){const has=state.solution.length>0;$('solution-controls').hidden=!has;if(!has)return;$('solution-progress').innerHTML=state.solution.map((m,i)=>`<span class="solution-token ${i<state.step?'done':i===state.step?'current':''}">${m}</span>`).join('');$('solution-caption').textContent=state.step===state.solution.length?'All six faces match. Nice work!':`Move ${state.step+1} of ${state.solution.length}: ${state.solution[state.step]} · ${caption(state.solution[state.step])}`;$('solution-back').disabled=state.step===0||animating;$('solution-next').disabled=state.step===state.solution.length||animating;}
-async function solverStep(back){if(animating||solving)return;const m=back?state.solution[state.step-1]:state.solution[state.step];if(!m)return;animating=true;renderSolution();if(!state.layout){animating=false;openCalibration();return;}await view.turn(fixCube,back?inverse(m):m);state.step+=back?-1:1;state.fixCount=state.step;animating=false;$('move-caption').textContent=`${back?'Undid':'Made'} ${m}. Match this on your real cube.`;render();}
+// A replay uses its own cube. The solve position and move count never rewind.
+function replayAvailable(){const r=state.lastPlayback;return !!(r&&/^[URFDLB][2']?$/.test(r.move)&&r.after===fixCube.asString()&&!validate(r.before)&&Cube.fromString(r.before).move(r.move).asString()===r.after);}
+function renderSolution(){
+ const has=state.solution.length>0;$('solution-controls').hidden=!has;if(!has)return;
+ $('solution-progress').innerHTML=state.solution.map((m,i)=>`<span class="solution-token ${i<state.step?'done':i===state.step?'current':''}">${m}</span>`).join('');
+ const current=activePlayback;
+ $('solution-caption').textContent=current?`${current.replay?'Replay':current.back?'Undo':'Watch'} ${current.move} · ${caption(current.move)}`:state.step===state.solution.length?'All six faces match. Nice work!':`Next: move ${state.step+1} of ${state.solution.length} · ${state.solution[state.step]} · ${caption(state.solution[state.step])}`;
+ $('solution-back').disabled=state.step===0||animating;
+ $('solution-next').disabled=state.step===state.solution.length||animating;
+ $('solution-replay').disabled=animating||!replayAvailable();
+ $('solution-replay').textContent=`↻ Replay this move${state.lastPlayback?' · '+state.lastPlayback.move:''}`;
+ $('playback-speed').value=state.playbackSpeed==='slow'?'slow':'normal';$('playback-speed').disabled=animating;
+ $('reset-view').disabled=animating;
+}
+async function playTurn(move,{back=false,replay=false}={}){
+ if(animating||solving)return;
+ if(!state.layout){openCalibration();return;}
+ const before=replay?state.lastPlayback.before:fixCube.asString();
+ const target=replay?Cube.fromString(before):fixCube;
+ animating=true;activePlayback={move,back,replay};renderSolution();renderObjective();
+ $('playback-status').textContent=`${replay?'Replaying':'Watch'} ${move}: ${faceNames[move[0]]} face. ${move.endsWith('2')?'Half a turn':move.endsWith("'")?'Counterclockwise':'Clockwise'}, looking at that face.`;
+ try{
+ if(await view.turn(target,move,{playback:true,slow:state.playbackSpeed==='slow'})===false)return;
+ if(!replay){state.step+=back?-1:1;state.fixCount=state.step;state.lastPlayback={before,after:fixCube.asString(),move};}
+ $('playback-status').textContent=`${replay?'Replayed':back?'Undid':'Made'} ${move}. ${replay?'Your place is unchanged.':'Copy this on your real cube. Replay if you need another look.'}`;
+ }catch(e){$('playback-status').textContent='That turn was interrupted. Try it again.';}
+ finally{animating=false;activePlayback=null;view.render(fixCube);render();}
+}
+async function solverStep(back){if(animating||solving)return;const m=back?state.solution[state.step-1]:state.solution[state.step];if(m)await playTurn(back?inverse(m):m,{back});}
+async function replayMove(){if(animating||solving||!replayAvailable())return;await playTurn(state.lastPlayback.move,{replay:true});}
 $('solution-back').onclick=()=>solverStep(true);$('solution-next').onclick=()=>solverStep(false);
+$('solution-replay').onclick=replayMove;
+$('playback-speed').onchange=()=>{if(animating)return;state.playbackSpeed=$('playback-speed').value==='slow'?'slow':'normal';save();};
 // Keyboard turns are available outside text fields; Shift reverses a turn.
 window.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA|BUTTON/.test(e.target.tagName)||e.ctrlKey||e.metaKey||e.altKey)return;const f=e.key.toUpperCase();if(faces.includes(f)&&f.length===1){e.preventDefault();perform(f+(e.shiftKey?"'":''));}});
 // A saved hint never exposes a stale move after reload.
@@ -124,6 +154,7 @@ function renderObjective(){let now,next,progress,action,handler;
  else if(state.phase==='explain'){next='Next: a fresh task from memory';action='Try from memory';handler=()=>$('begin-recall').click();}
  else {next=state.phase==='predict'?'Next: test your idea on the cube':state.phase==='free'?'Next: return to your saved task':state.recall?'Next: reach the goal without clues':state.phase==='review'?'Next: recall the earlier move pattern':'Next: reach the goal, then try from memory';action=state.phase==='free'?'Back to my task':'See my task';handler=()=>state.phase==='free'?$('return-task').click():$('coach').scrollIntoView({block:'start'});}
  }
+ if(activePlayback){now=`${activePlayback.replay?'Replay':activePlayback.back?'Undo':'Watch'} ${activePlayback.move}`;next='Watch the arrow. Then copy the turn.';action='Watching…';}
  $('objective-now').textContent=now;$('objective-next').textContent=next;$('objective-progress').textContent=progress;$('objective-action').textContent=action;$('objective-action').disabled=!handler||animating;$('objective-action').onclick=handler;
 }
 function syncThemeButton(){const dark=CubeTheme.isDark();$('theme-toggle').textContent=dark?'☀':'☾';$('theme-toggle').setAttribute('aria-label',`Switch to ${dark?'light':'dark'} mode`);$('theme-toggle').title=`Switch to ${dark?'light':'dark'} mode`;}
