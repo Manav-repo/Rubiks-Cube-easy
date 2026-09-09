@@ -1,0 +1,2170 @@
+[
+  {
+    "width": 393,
+    "height": 852,
+    "colorScheme": "light",
+    "measure": {
+      "width": 393,
+      "height": 852,
+      "touch": 1,
+      "pageWidth": 393,
+      "pageHeight": 852,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 81,
+        "top": 0,
+        "right": 393,
+        "bottom": 81,
+        "left": 0
+      },
+      "modes": {
+        "x": 0,
+        "y": 81,
+        "width": 393,
+        "height": 80,
+        "top": 81,
+        "right": 393,
+        "bottom": 161,
+        "left": 0
+      },
+      "card": {
+        "x": 16,
+        "y": 161,
+        "width": 361,
+        "height": 360,
+        "top": 161,
+        "right": 377,
+        "bottom": 521,
+        "left": 16
+      },
+      "footer": {
+        "x": 16,
+        "y": 477,
+        "width": 361,
+        "height": 44,
+        "top": 477,
+        "right": 377,
+        "bottom": 521,
+        "left": 16
+      },
+      "controls": {
+        "x": 0,
+        "y": 521,
+        "width": 393,
+        "height": 75,
+        "top": 521,
+        "right": 393,
+        "bottom": 596,
+        "left": 0
+      },
+      "details": {
+        "x": 0,
+        "y": 612,
+        "width": 393,
+        "height": 240,
+        "top": 612,
+        "right": 393,
+        "bottom": 852,
+        "left": 0
+      },
+      "tokens": [
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        }
+      ],
+      "headerTargets": [
+        {
+          "id": "",
+          "w": 167,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "settings-toggle",
+          "w": 44,
+          "h": 44
+        }
+      ],
+      "gap": "12px",
+      "ids": [
+        "save-status",
+        "theme-toggle",
+        "support-links",
+        "settings-toggle",
+        "settings",
+        "symbols",
+        "accessible",
+        "calibrate-settings",
+        "theme-system",
+        "layout-status",
+        "learn-mode",
+        "fix-mode",
+        "badge-count",
+        "progress",
+        "stages",
+        "objective-now",
+        "objective-next",
+        "objective-progress",
+        "objective-action",
+        "stage-label",
+        "move-count",
+        "stage-title",
+        "stage-subtitle",
+        "cube-space",
+        "scene",
+        "cube",
+        "view-label",
+        "reset-view",
+        "reverse",
+        "face-controls",
+        "undo",
+        "restart",
+        "scramble",
+        "move-caption",
+        "coach",
+        "hint",
+        "painter",
+        "painter-title",
+        "painter-intro",
+        "painting-progress",
+        "palette",
+        "cube-net",
+        "painter-actions",
+        "paint-reset",
+        "paint-demo",
+        "solve",
+        "solver-message",
+        "solution-controls",
+        "solution-caption",
+        "solution-back",
+        "solution-replay",
+        "solution-next",
+        "playback-speed",
+        "playback-status",
+        "solution-progress",
+        "calibration",
+        "calibration-title",
+        "calibration-question",
+        "layout-choices",
+        "calibration-note",
+        "calibration-skip"
+      ]
+    },
+    "passed": true
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "colorScheme": "dark",
+    "measure": {
+      "width": 393,
+      "height": 852,
+      "touch": 1,
+      "pageWidth": 393,
+      "pageHeight": 852,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 81,
+        "top": 0,
+        "right": 393,
+        "bottom": 81,
+        "left": 0
+      },
+      "modes": {
+        "x": 0,
+        "y": 81,
+        "width": 393,
+        "height": 80,
+        "top": 81,
+        "right": 393,
+        "bottom": 161,
+        "left": 0
+      },
+      "card": {
+        "x": 16,
+        "y": 161,
+        "width": 361,
+        "height": 360,
+        "top": 161,
+        "right": 377,
+        "bottom": 521,
+        "left": 16
+      },
+      "footer": {
+        "x": 16,
+        "y": 477,
+        "width": 361,
+        "height": 44,
+        "top": 477,
+        "right": 377,
+        "bottom": 521,
+        "left": 16
+      },
+      "controls": {
+        "x": 0,
+        "y": 521,
+        "width": 393,
+        "height": 75,
+        "top": 521,
+        "right": 393,
+        "bottom": 596,
+        "left": 0
+      },
+      "details": {
+        "x": 0,
+        "y": 612,
+        "width": 393,
+        "height": 240,
+        "top": 612,
+        "right": 393,
+        "bottom": 852,
+        "left": 0
+      },
+      "tokens": [
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 50.171875,
+          "h": 44
+        }
+      ],
+      "headerTargets": [
+        {
+          "id": "",
+          "w": 167,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "settings-toggle",
+          "w": 44,
+          "h": 44
+        }
+      ],
+      "gap": "12px",
+      "ids": [
+        "save-status",
+        "theme-toggle",
+        "support-links",
+        "settings-toggle",
+        "settings",
+        "symbols",
+        "accessible",
+        "calibrate-settings",
+        "theme-system",
+        "layout-status",
+        "learn-mode",
+        "fix-mode",
+        "badge-count",
+        "progress",
+        "stages",
+        "objective-now",
+        "objective-next",
+        "objective-progress",
+        "objective-action",
+        "stage-label",
+        "move-count",
+        "stage-title",
+        "stage-subtitle",
+        "cube-space",
+        "scene",
+        "cube",
+        "view-label",
+        "reset-view",
+        "reverse",
+        "face-controls",
+        "undo",
+        "restart",
+        "scramble",
+        "move-caption",
+        "coach",
+        "hint",
+        "painter",
+        "painter-title",
+        "painter-intro",
+        "painting-progress",
+        "palette",
+        "cube-net",
+        "painter-actions",
+        "paint-reset",
+        "paint-demo",
+        "solve",
+        "solver-message",
+        "solution-controls",
+        "solution-caption",
+        "solution-back",
+        "solution-replay",
+        "solution-next",
+        "playback-speed",
+        "playback-status",
+        "solution-progress",
+        "calibration",
+        "calibration-title",
+        "calibration-question",
+        "layout-choices",
+        "calibration-note",
+        "calibration-skip"
+      ]
+    },
+    "passed": true
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "colorScheme": "light",
+    "measure": {
+      "width": 375,
+      "height": 667,
+      "touch": 1,
+      "pageWidth": 375,
+      "pageHeight": 667,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 81,
+        "top": 0,
+        "right": 375,
+        "bottom": 81,
+        "left": 0
+      },
+      "modes": {
+        "x": 0,
+        "y": 81,
+        "width": 375,
+        "height": 80,
+        "top": 81,
+        "right": 375,
+        "bottom": 161,
+        "left": 0
+      },
+      "card": {
+        "x": 16,
+        "y": 161,
+        "width": 343,
+        "height": 320,
+        "top": 161,
+        "right": 359,
+        "bottom": 481,
+        "left": 16
+      },
+      "footer": {
+        "x": 16,
+        "y": 437,
+        "width": 343,
+        "height": 44,
+        "top": 437,
+        "right": 359,
+        "bottom": 481,
+        "left": 16
+      },
+      "controls": {
+        "x": 0,
+        "y": 481,
+        "width": 375,
+        "height": 75,
+        "top": 481,
+        "right": 375,
+        "bottom": 556,
+        "left": 0
+      },
+      "details": {
+        "x": 0,
+        "y": 572,
+        "width": 375,
+        "height": 95,
+        "top": 572,
+        "right": 375,
+        "bottom": 667,
+        "left": 0
+      },
+      "tokens": [
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        }
+      ],
+      "headerTargets": [
+        {
+          "id": "",
+          "w": 151,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "settings-toggle",
+          "w": 44,
+          "h": 44
+        }
+      ],
+      "gap": "12px",
+      "ids": [
+        "save-status",
+        "theme-toggle",
+        "support-links",
+        "settings-toggle",
+        "settings",
+        "symbols",
+        "accessible",
+        "calibrate-settings",
+        "theme-system",
+        "layout-status",
+        "learn-mode",
+        "fix-mode",
+        "badge-count",
+        "progress",
+        "stages",
+        "objective-now",
+        "objective-next",
+        "objective-progress",
+        "objective-action",
+        "stage-label",
+        "move-count",
+        "stage-title",
+        "stage-subtitle",
+        "cube-space",
+        "scene",
+        "cube",
+        "view-label",
+        "reset-view",
+        "reverse",
+        "face-controls",
+        "undo",
+        "restart",
+        "scramble",
+        "move-caption",
+        "coach",
+        "hint",
+        "painter",
+        "painter-title",
+        "painter-intro",
+        "painting-progress",
+        "palette",
+        "cube-net",
+        "painter-actions",
+        "paint-reset",
+        "paint-demo",
+        "solve",
+        "solver-message",
+        "solution-controls",
+        "solution-caption",
+        "solution-back",
+        "solution-replay",
+        "solution-next",
+        "playback-speed",
+        "playback-status",
+        "solution-progress",
+        "calibration",
+        "calibration-title",
+        "calibration-question",
+        "layout-choices",
+        "calibration-note",
+        "calibration-skip"
+      ]
+    },
+    "passed": true
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "colorScheme": "dark",
+    "measure": {
+      "width": 375,
+      "height": 667,
+      "touch": 1,
+      "pageWidth": 375,
+      "pageHeight": 667,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 81,
+        "top": 0,
+        "right": 375,
+        "bottom": 81,
+        "left": 0
+      },
+      "modes": {
+        "x": 0,
+        "y": 81,
+        "width": 375,
+        "height": 80,
+        "top": 81,
+        "right": 375,
+        "bottom": 161,
+        "left": 0
+      },
+      "card": {
+        "x": 16,
+        "y": 161,
+        "width": 343,
+        "height": 320,
+        "top": 161,
+        "right": 359,
+        "bottom": 481,
+        "left": 16
+      },
+      "footer": {
+        "x": 16,
+        "y": 437,
+        "width": 343,
+        "height": 44,
+        "top": 437,
+        "right": 359,
+        "bottom": 481,
+        "left": 16
+      },
+      "controls": {
+        "x": 0,
+        "y": 481,
+        "width": 375,
+        "height": 75,
+        "top": 481,
+        "right": 375,
+        "bottom": 556,
+        "left": 0
+      },
+      "details": {
+        "x": 0,
+        "y": 572,
+        "width": 375,
+        "height": 95,
+        "top": 572,
+        "right": 375,
+        "bottom": 667,
+        "left": 0
+      },
+      "tokens": [
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.15625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 47.171875,
+          "h": 44
+        }
+      ],
+      "headerTargets": [
+        {
+          "id": "",
+          "w": 151,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "settings-toggle",
+          "w": 44,
+          "h": 44
+        }
+      ],
+      "gap": "12px",
+      "ids": [
+        "save-status",
+        "theme-toggle",
+        "support-links",
+        "settings-toggle",
+        "settings",
+        "symbols",
+        "accessible",
+        "calibrate-settings",
+        "theme-system",
+        "layout-status",
+        "learn-mode",
+        "fix-mode",
+        "badge-count",
+        "progress",
+        "stages",
+        "objective-now",
+        "objective-next",
+        "objective-progress",
+        "objective-action",
+        "stage-label",
+        "move-count",
+        "stage-title",
+        "stage-subtitle",
+        "cube-space",
+        "scene",
+        "cube",
+        "view-label",
+        "reset-view",
+        "reverse",
+        "face-controls",
+        "undo",
+        "restart",
+        "scramble",
+        "move-caption",
+        "coach",
+        "hint",
+        "painter",
+        "painter-title",
+        "painter-intro",
+        "painting-progress",
+        "palette",
+        "cube-net",
+        "painter-actions",
+        "paint-reset",
+        "paint-demo",
+        "solve",
+        "solver-message",
+        "solution-controls",
+        "solution-caption",
+        "solution-back",
+        "solution-replay",
+        "solution-next",
+        "playback-speed",
+        "playback-status",
+        "solution-progress",
+        "calibration",
+        "calibration-title",
+        "calibration-question",
+        "layout-choices",
+        "calibration-note",
+        "calibration-skip"
+      ]
+    },
+    "passed": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "colorScheme": "light",
+    "measure": {
+      "width": 390,
+      "height": 844,
+      "touch": 1,
+      "pageWidth": 390,
+      "pageHeight": 844,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 81,
+        "top": 0,
+        "right": 390,
+        "bottom": 81,
+        "left": 0
+      },
+      "modes": {
+        "x": 0,
+        "y": 81,
+        "width": 390,
+        "height": 80,
+        "top": 81,
+        "right": 390,
+        "bottom": 161,
+        "left": 0
+      },
+      "card": {
+        "x": 16,
+        "y": 161,
+        "width": 358,
+        "height": 360,
+        "top": 161,
+        "right": 374,
+        "bottom": 521,
+        "left": 16
+      },
+      "footer": {
+        "x": 16,
+        "y": 477,
+        "width": 358,
+        "height": 44,
+        "top": 477,
+        "right": 374,
+        "bottom": 521,
+        "left": 16
+      },
+      "controls": {
+        "x": 0,
+        "y": 521,
+        "width": 390,
+        "height": 75,
+        "top": 521,
+        "right": 390,
+        "bottom": 596,
+        "left": 0
+      },
+      "details": {
+        "x": 0,
+        "y": 612,
+        "width": 390,
+        "height": 232,
+        "top": 612,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "tokens": [
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        }
+      ],
+      "headerTargets": [
+        {
+          "id": "",
+          "w": 166,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "settings-toggle",
+          "w": 44,
+          "h": 44
+        }
+      ],
+      "gap": "12px",
+      "ids": [
+        "save-status",
+        "theme-toggle",
+        "support-links",
+        "settings-toggle",
+        "settings",
+        "symbols",
+        "accessible",
+        "calibrate-settings",
+        "theme-system",
+        "layout-status",
+        "learn-mode",
+        "fix-mode",
+        "badge-count",
+        "progress",
+        "stages",
+        "objective-now",
+        "objective-next",
+        "objective-progress",
+        "objective-action",
+        "stage-label",
+        "move-count",
+        "stage-title",
+        "stage-subtitle",
+        "cube-space",
+        "scene",
+        "cube",
+        "view-label",
+        "reset-view",
+        "reverse",
+        "face-controls",
+        "undo",
+        "restart",
+        "scramble",
+        "move-caption",
+        "coach",
+        "hint",
+        "painter",
+        "painter-title",
+        "painter-intro",
+        "painting-progress",
+        "palette",
+        "cube-net",
+        "painter-actions",
+        "paint-reset",
+        "paint-demo",
+        "solve",
+        "solver-message",
+        "solution-controls",
+        "solution-caption",
+        "solution-back",
+        "solution-replay",
+        "solution-next",
+        "playback-speed",
+        "playback-status",
+        "solution-progress",
+        "calibration",
+        "calibration-title",
+        "calibration-question",
+        "layout-choices",
+        "calibration-note",
+        "calibration-skip"
+      ]
+    },
+    "passed": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "colorScheme": "dark",
+    "measure": {
+      "width": 390,
+      "height": 844,
+      "touch": 1,
+      "pageWidth": 390,
+      "pageHeight": 844,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 81,
+        "top": 0,
+        "right": 390,
+        "bottom": 81,
+        "left": 0
+      },
+      "modes": {
+        "x": 0,
+        "y": 81,
+        "width": 390,
+        "height": 80,
+        "top": 81,
+        "right": 390,
+        "bottom": 161,
+        "left": 0
+      },
+      "card": {
+        "x": 16,
+        "y": 161,
+        "width": 358,
+        "height": 360,
+        "top": 161,
+        "right": 374,
+        "bottom": 521,
+        "left": 16
+      },
+      "footer": {
+        "x": 16,
+        "y": 477,
+        "width": 358,
+        "height": 44,
+        "top": 477,
+        "right": 374,
+        "bottom": 521,
+        "left": 16
+      },
+      "controls": {
+        "x": 0,
+        "y": 521,
+        "width": 390,
+        "height": 75,
+        "top": 521,
+        "right": 390,
+        "bottom": 596,
+        "left": 0
+      },
+      "details": {
+        "x": 0,
+        "y": 612,
+        "width": 390,
+        "height": 232,
+        "top": 612,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "tokens": [
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 49.671875,
+          "h": 44
+        }
+      ],
+      "headerTargets": [
+        {
+          "id": "",
+          "w": 166,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "settings-toggle",
+          "w": 44,
+          "h": 44
+        }
+      ],
+      "gap": "12px",
+      "ids": [
+        "save-status",
+        "theme-toggle",
+        "support-links",
+        "settings-toggle",
+        "settings",
+        "symbols",
+        "accessible",
+        "calibrate-settings",
+        "theme-system",
+        "layout-status",
+        "learn-mode",
+        "fix-mode",
+        "badge-count",
+        "progress",
+        "stages",
+        "objective-now",
+        "objective-next",
+        "objective-progress",
+        "objective-action",
+        "stage-label",
+        "move-count",
+        "stage-title",
+        "stage-subtitle",
+        "cube-space",
+        "scene",
+        "cube",
+        "view-label",
+        "reset-view",
+        "reverse",
+        "face-controls",
+        "undo",
+        "restart",
+        "scramble",
+        "move-caption",
+        "coach",
+        "hint",
+        "painter",
+        "painter-title",
+        "painter-intro",
+        "painting-progress",
+        "palette",
+        "cube-net",
+        "painter-actions",
+        "paint-reset",
+        "paint-demo",
+        "solve",
+        "solver-message",
+        "solution-controls",
+        "solution-caption",
+        "solution-back",
+        "solution-replay",
+        "solution-next",
+        "playback-speed",
+        "playback-status",
+        "solution-progress",
+        "calibration",
+        "calibration-title",
+        "calibration-question",
+        "layout-choices",
+        "calibration-note",
+        "calibration-skip"
+      ]
+    },
+    "passed": true
+  },
+  {
+    "width": 360,
+    "height": 800,
+    "colorScheme": "light",
+    "measure": {
+      "width": 360,
+      "height": 800,
+      "touch": 1,
+      "pageWidth": 360,
+      "pageHeight": 800,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 81,
+        "top": 0,
+        "right": 360,
+        "bottom": 81,
+        "left": 0
+      },
+      "modes": {
+        "x": 0,
+        "y": 81,
+        "width": 360,
+        "height": 80,
+        "top": 81,
+        "right": 360,
+        "bottom": 161,
+        "left": 0
+      },
+      "card": {
+        "x": 16,
+        "y": 161,
+        "width": 328,
+        "height": 360,
+        "top": 161,
+        "right": 344,
+        "bottom": 521,
+        "left": 16
+      },
+      "footer": {
+        "x": 16,
+        "y": 477,
+        "width": 328,
+        "height": 44,
+        "top": 477,
+        "right": 344,
+        "bottom": 521,
+        "left": 16
+      },
+      "controls": {
+        "x": 0,
+        "y": 521,
+        "width": 360,
+        "height": 75,
+        "top": 521,
+        "right": 360,
+        "bottom": 596,
+        "left": 0
+      },
+      "details": {
+        "x": 0,
+        "y": 612,
+        "width": 360,
+        "height": 188,
+        "top": 612,
+        "right": 360,
+        "bottom": 800,
+        "left": 0
+      },
+      "tokens": [
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        }
+      ],
+      "headerTargets": [
+        {
+          "id": "",
+          "w": 136,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "settings-toggle",
+          "w": 44,
+          "h": 44
+        }
+      ],
+      "gap": "12px",
+      "ids": [
+        "save-status",
+        "theme-toggle",
+        "support-links",
+        "settings-toggle",
+        "settings",
+        "symbols",
+        "accessible",
+        "calibrate-settings",
+        "theme-system",
+        "layout-status",
+        "learn-mode",
+        "fix-mode",
+        "badge-count",
+        "progress",
+        "stages",
+        "objective-now",
+        "objective-next",
+        "objective-progress",
+        "objective-action",
+        "stage-label",
+        "move-count",
+        "stage-title",
+        "stage-subtitle",
+        "cube-space",
+        "scene",
+        "cube",
+        "view-label",
+        "reset-view",
+        "reverse",
+        "face-controls",
+        "undo",
+        "restart",
+        "scramble",
+        "move-caption",
+        "coach",
+        "hint",
+        "painter",
+        "painter-title",
+        "painter-intro",
+        "painting-progress",
+        "palette",
+        "cube-net",
+        "painter-actions",
+        "paint-reset",
+        "paint-demo",
+        "solve",
+        "solver-message",
+        "solution-controls",
+        "solution-caption",
+        "solution-back",
+        "solution-replay",
+        "solution-next",
+        "playback-speed",
+        "playback-status",
+        "solution-progress",
+        "calibration",
+        "calibration-title",
+        "calibration-question",
+        "layout-choices",
+        "calibration-note",
+        "calibration-skip"
+      ]
+    },
+    "passed": true
+  },
+  {
+    "width": 360,
+    "height": 800,
+    "colorScheme": "dark",
+    "measure": {
+      "width": 360,
+      "height": 800,
+      "touch": 1,
+      "pageWidth": 360,
+      "pageHeight": 800,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 81,
+        "top": 0,
+        "right": 360,
+        "bottom": 81,
+        "left": 0
+      },
+      "modes": {
+        "x": 0,
+        "y": 81,
+        "width": 360,
+        "height": 80,
+        "top": 81,
+        "right": 360,
+        "bottom": 161,
+        "left": 0
+      },
+      "card": {
+        "x": 16,
+        "y": 161,
+        "width": 328,
+        "height": 360,
+        "top": 161,
+        "right": 344,
+        "bottom": 521,
+        "left": 16
+      },
+      "footer": {
+        "x": 16,
+        "y": 477,
+        "width": 328,
+        "height": 44,
+        "top": 477,
+        "right": 344,
+        "bottom": 521,
+        "left": 16
+      },
+      "controls": {
+        "x": 0,
+        "y": 521,
+        "width": 360,
+        "height": 75,
+        "top": 521,
+        "right": 360,
+        "bottom": 596,
+        "left": 0
+      },
+      "details": {
+        "x": 0,
+        "y": 612,
+        "width": 360,
+        "height": 188,
+        "top": 612,
+        "right": 360,
+        "bottom": 800,
+        "left": 0
+      },
+      "tokens": [
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.65625,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44.671875,
+          "h": 44
+        }
+      ],
+      "headerTargets": [
+        {
+          "id": "",
+          "w": 136,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "",
+          "w": 44,
+          "h": 44
+        },
+        {
+          "id": "settings-toggle",
+          "w": 44,
+          "h": 44
+        }
+      ],
+      "gap": "12px",
+      "ids": [
+        "save-status",
+        "theme-toggle",
+        "support-links",
+        "settings-toggle",
+        "settings",
+        "symbols",
+        "accessible",
+        "calibrate-settings",
+        "theme-system",
+        "layout-status",
+        "learn-mode",
+        "fix-mode",
+        "badge-count",
+        "progress",
+        "stages",
+        "objective-now",
+        "objective-next",
+        "objective-progress",
+        "objective-action",
+        "stage-label",
+        "move-count",
+        "stage-title",
+        "stage-subtitle",
+        "cube-space",
+        "scene",
+        "cube",
+        "view-label",
+        "reset-view",
+        "reverse",
+        "face-controls",
+        "undo",
+        "restart",
+        "scramble",
+        "move-caption",
+        "coach",
+        "hint",
+        "painter",
+        "painter-title",
+        "painter-intro",
+        "painting-progress",
+        "palette",
+        "cube-net",
+        "painter-actions",
+        "paint-reset",
+        "paint-demo",
+        "solve",
+        "solver-message",
+        "solution-controls",
+        "solution-caption",
+        "solution-back",
+        "solution-replay",
+        "solution-next",
+        "playback-speed",
+        "playback-status",
+        "solution-progress",
+        "calibration",
+        "calibration-title",
+        "calibration-question",
+        "layout-choices",
+        "calibration-note",
+        "calibration-skip"
+      ]
+    },
+    "passed": true
+  }
+]
