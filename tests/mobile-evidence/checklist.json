@@ -1,0 +1,110 @@
+[
+  {
+    "sourceHash": "9a10ed85f742475aa60cdfcb405264fbb998461af84956996ab7443393a3cceb",
+    "width": 375,
+    "height": 667,
+    "visited": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "recalls": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "badges": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "solverMoves": 22,
+    "hiddenFacePan": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "sourceHash": "9a10ed85f742475aa60cdfcb405264fbb998461af84956996ab7443393a3cceb",
+    "width": 390,
+    "height": 844,
+    "visited": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "recalls": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "badges": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "solverMoves": 22,
+    "hiddenFacePan": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "sourceHash": "9a10ed85f742475aa60cdfcb405264fbb998461af84956996ab7443393a3cceb",
+    "width": 360,
+    "height": 800,
+    "visited": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "recalls": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "badges": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "solverMoves": 22,
+    "hiddenFacePan": true,
+    "errors": [],
+    "passed": true
+  }
+]
