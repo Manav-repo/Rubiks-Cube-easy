@@ -50,4 +50,4 @@ Entries will be added after each issue is implemented and validated.
 
 ## Final validation notes
 
-The full device-emulation pass remains required before release. The included QA scripts target genuine Playwright mobile contexts at 375×667, 390×844, and 360×800, but this environment does not contain their external QA-only Playwright module (`/private/tmp/cube-brainiac-qa/node_modules/playwright`). No claim of a fresh device run is made until that dependency is available.
+The full device-emulation pass remains required before release. The included QA scripts target genuine Playwright mobile contexts at 375×667, 390×844, and 360×800. The primary runtime includes Playwright, but this environment does not have the Chromium executable installed, so the scripts stopped at browser launch; no claim of a fresh device run is made.
