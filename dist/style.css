@@ -188,3 +188,62 @@ body.playback footer #support-links{display:flex}
 }
 
 @media(max-width:680px){body.playback .objective .eyebrow,body.playback #objective-next{display:none}}
+
+/* Visual polish: a calm, repeatable mobile spacing rhythm. Playback keeps its
+   measured shell above; these rules add breathing room to the learning and
+   painter surfaces without changing their interaction geometry. */
+@media(max-width:680px){
+ :root{--space-1:8px;--space-2:12px;--space-3:16px;--space-4:24px}
+ body:not(.playback) main{padding-inline:var(--space-3);padding-top:var(--space-3)}
+ body:not(.playback) header{padding-inline:var(--space-3)}
+ body:not(.playback) .objective{margin-bottom:var(--space-2);padding-block:var(--space-2)}
+ body:not(.playback) .intro{margin:var(--space-3) 0 var(--space-4);gap:var(--space-3)}
+ body:not(.playback) .app-layout{gap:var(--space-4)}
+ body:not(.playback) .workspace{padding:var(--space-4)}
+ body:not(.playback) .coach-task,body:not(.playback) .coach-response{padding:var(--space-4)}
+ body:not(.playback) .coach-top{padding:var(--space-3) var(--space-4)}
+ body:not(.playback) .palette{gap:var(--space-1);margin-block:var(--space-3)}
+ body:not(.playback) .cube-net{margin-block:var(--space-4);row-gap:var(--space-4)}
+ body:not(.playback) .net-note{margin-block:var(--space-3)}
+ body:not(.playback) .painter-actions{gap:var(--space-2)}
+ body:not(.playback) footer{margin-top:var(--space-4);padding-block:var(--space-2);gap:var(--space-2)}
+}
+
+/* Visual polish: quiet icon-only support strip. The links keep their real
+   touch area and accessible names; only the decorative visible labels go. */
+footer{padding-block:12px;min-height:56px}
+#support-links a span,#support-links a::after{display:none!important;content:none!important}
+#support-links a{gap:0}
+@media(max-width:680px){
+ footer{min-height:56px;padding:6px var(--space-3);gap:var(--space-1)}
+ #support-links{gap:var(--space-1)}
+ #support-links a{width:44px;min-width:44px;height:44px;min-height:44px;padding:0}
+ #support-links svg{width:20px;height:20px}
+}
+
+/* Ready-to-solve painter state: keep the next action visually primary. */
+@media(max-width:680px){
+ body.fix.paint-ready .intro>div:first-child,
+ body.fix.paint-ready .painter #painter-intro,
+ body.fix.paint-ready .painter .net-note,
+ body.fix.paint-ready footer>span,
+ body.fix.paint-ready footer .support-qr{display:none}
+ body.fix.paint-ready .intro{margin:0 0 var(--space-3);min-height:0}
+ body.fix.paint-ready .painter-actions{justify-content:center}
+ body.fix.paint-ready #painting-progress{color:var(--muted);font-size:13px}
+ body.fix.paint-ready #solve{min-height:60px;font-size:18px;box-shadow:0 8px 22px #08142633}
+}
+
+/* Home signifiers: put the two real entry points first and let supporting
+   copy recede on a narrow screen. */
+@media(max-width:680px){
+ body.home main{display:flex;flex-direction:column;padding-top:var(--space-3)}
+ body.home .intro{order:1;margin:0 0 var(--space-3)}
+ body.home .intro>div:first-child{display:none}
+ body.home .mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-1);width:100%;margin:0;padding:var(--space-1);border-color:var(--line)}
+ body.home .mode-switch button{min-height:64px;padding:var(--space-2);font-size:17px;line-height:1.25;background:var(--button);border:1px solid var(--line);box-shadow:none}
+ body.home .mode-switch button.active{background:var(--primary);color:var(--on-primary);border-color:var(--primary);box-shadow:0 5px 12px #08142622}
+ body.home .objective{order:2;position:static;min-height:0;margin:0 0 var(--space-3);padding-block:var(--space-2);border-top:1px solid var(--line)}
+ body.home .app-layout{order:3}
+ body.home footer{order:4}
+}
