@@ -45,11 +45,13 @@ function renderCoach(){const l=lessons[state.stage];let body=`<div class="eyebro
  else if(state.phase==='review')body+=`<h3>A tiny memory break.</h3><p>Do you remember the first trick from “${lessons[state.reviewStage].title}”?</p><p>Build it below. Try before asking for a peek.</p><div class="recall-entry"><input id="review-input" aria-label="Remembered moves" placeholder="Example: R U R′" autocomplete="off" spellcheck="false"><button id="review-check" class="primary">Check my memory</button><button id="review-peek" class="hint-button">I need a reminder</button></div>`;
  else if(state.phase==='badge')body+=`<h3>${state.stage===6?'Look what you can do!':'A new skill is yours.'}</h3><div class="badge-display">✦</div><p>${l.why}</p><p>You reached the goal and did it again without clues.</p><button id="next-stage" class="primary">${state.whole&&state.stage<6?'Next layer →':state.stage===6?'Practice again ↺':'Next adventure →'}</button>${state.stage===6?'<button id="whole-challenge" class="hint-button">Solve a whole cube →</button>':''}`;
  else if(state.phase==='free')body+=`<h3>A little free play.</h3><p>This scramble was made with real turns. Try an idea and see what changes.</p><p>Your badges are safe. Return to your task when you’re ready.</p><button id="return-task" class="primary">Back to my task</button>`;
+ body=`<div class="coach-task">${body}</div><div class="coach-response">`;
  if(feedback)body+=`<p class="feedback" role="status">${feedback}</p>`;
  if(['predict','explore'].includes(state.phase)&&!state.recall){if(state.hint>=1)body+=`<p class="feedback">${state.hint===1?l.nudge:'The marked stickers are the ones to investigate. What homes do they need?'}</p>`;
  if(state.hint===3&&state.stage>0){const next=hintPlan[0];body+=next?`<p>${caption(next)}</p><button id="hint-move" class="primary" ${animating?'disabled':''}>Try ${next} →</button><p class="tiny">These clues restore your earlier layers if needed, then work toward this task’s goal.</p>`:'<p>Look at the goal and try another turn.</p>';}
  body+=`<button id="hint" class="hint-button" ${!state.attempted||state.hint>=3||planning?'disabled':''}>${['✧ A tiny clue, please','✧ Show me the pieces','✧ Help me make a turn','Three clues explored'][state.hint]}</button>`;
  }else if(state.recall&&state.phase==='explore')body+='<button id="back-practice" class="hint-button">Let’s practice with clues again</button>';
+ body+='</div>';
  $('coach').innerHTML=`<div class="coach-top"><span class="coach-avatar" aria-hidden="true">✳</span><div><strong>Your thinking buddy</strong><small>A clue, never a rush.</small></div></div><div class="coach-content">${body}</div><div class="coach-bottom"><span>♧</span>Every guess helps you learn something.</div>`;
  document.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{state.attempted=true;if(+b.dataset.answer===l.correct){state.phase='explore';feedback='Yes! You found it — nice thinking.';if(state.stage>0&&goals[state.stage](cube))completeTask();}else feedback='Not quite — but good guess! What do the colors tell you?';render();});
  if($('hint'))$('hint').onclick=()=>{state.hint++;feedback='';if(state.hint===3&&state.whole&&!state.wholeRecall){requestLayerHint();return;}if(state.hint===3){hintPlan=(inverse(state.history.join(' '))+' '+state.plan.join(' ')).trim().split(/\s+/).filter(Boolean);}render();};
@@ -155,6 +157,7 @@ try{if(!plannerWorker)plannerWorker=new Worker('js/planner-worker.js');plannerWo
 function renderObjective(){let now,next,progress,action,handler;
  if(state.mode==='fix'){
  const painted=[...state.paint].filter(c=>c!=='?').length;
+ $('solve').disabled=painted!==54||solving||animating;
  $('painting-progress').textContent=`${painted} of 54 stickers painted · ${54-painted} left (6 centers included)`;
  if(solving){now='Finding your moves';next='Next: follow one turn at a time';progress='Your colors are ready';action='Thinking…';handler=null;}
  else if(state.solution.length){const done=state.step===state.solution.length;now=done?'Your cube is solved!':`Follow move ${state.step+1}: ${state.solution[state.step]}`;next=done?'Next: paint another cube':'Next: match this turn on your real cube';progress=`${state.step} of ${state.solution.length} moves done`;action=done?'Paint another cube':'Next move';handler=()=>done?$('paint-reset').click():$('solution-next').click();}
