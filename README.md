@@ -55,6 +55,6 @@ In **Settings → Pages**, choose **Deploy from a branch**, then **main** and **
 
 Built by Manav. The app code is MIT licensed; cubejs and bundled fonts retain their own license files.
 
-- [Support this project](https://buymeacoffee.com/Manavbuilds)
+- [Support this project](https://buymeacoffee.com/manavbuilds)
 - [X](https://x.com/Manavdoedits)
 - [LinkedIn](https://www.linkedin.com/in/manavsharma-/)
