@@ -1,0 +1,110 @@
+[
+  {
+    "sourceHash": "2b7b525bdc22f54c11c693e65388cf15a15da3e33332eeb59ad0db338dcededd",
+    "width": 375,
+    "height": 667,
+    "visited": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "recalls": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "badges": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "solverMoves": 22,
+    "hiddenFacePan": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "sourceHash": "2b7b525bdc22f54c11c693e65388cf15a15da3e33332eeb59ad0db338dcededd",
+    "width": 390,
+    "height": 844,
+    "visited": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "recalls": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "badges": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "solverMoves": 22,
+    "hiddenFacePan": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "sourceHash": "2b7b525bdc22f54c11c693e65388cf15a15da3e33332eeb59ad0db338dcededd",
+    "width": 360,
+    "height": 800,
+    "visited": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "recalls": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "badges": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "solverMoves": 22,
+    "hiddenFacePan": true,
+    "errors": [],
+    "passed": true
+  }
+]

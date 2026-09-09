@@ -109,7 +109,8 @@ function renderSolution(){
  $('solution-back').disabled=state.step===0||animating;
  $('solution-next').disabled=state.step===state.solution.length||animating;
  $('solution-replay').disabled=animating||!replayAvailable();
- $('solution-replay').textContent=`↻ Replay this move${state.lastPlayback?' · '+state.lastPlayback.move:''}`;
+ $('solution-replay').innerHTML='<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7a6 6 0 1 1 1 5M2 2v5h5"/></svg><span>Replay</span>';
+ $('solution-replay').setAttribute('aria-label',`Replay this move${state.lastPlayback?' · '+state.lastPlayback.move:''}`);
  $('playback-speed').value=state.playbackSpeed==='slow'?'slow':'normal';$('playback-speed').disabled=animating;
  $('reset-view').disabled=animating;
 }
