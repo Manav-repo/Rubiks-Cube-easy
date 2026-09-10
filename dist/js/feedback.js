@@ -4,7 +4,7 @@
  const recipient='manav.uix@gmail.com';
  const amount=document.getElementById('camera-fund-amount');
  const progress=document.getElementById('camera-fund-progress');
- amount.textContent='$'+raised.toLocaleString('en-US')+' toward my $'+goal.toLocaleString('en-US')+' goal';
+ amount.textContent='$'+raised+' of $'+goal+' raised';
  progress.max=goal;
  progress.value=Math.max(0,Math.min(raised,goal));
  progress.setAttribute('aria-valuetext',amount.textContent);
@@ -23,6 +23,5 @@
   if(!form.reportValidity())return;
   const draft='mailto:'+recipient+'?subject='+encodeURIComponent('Cube Easy feedback')+'&body='+encodeURIComponent(body);
   window.location.href=draft;
-  document.getElementById('feedback-status').textContent='Your email app should open. Review the draft and press Send there. If it does not open, copy your message and email manav.uix@gmail.com.';
  });
 })();
