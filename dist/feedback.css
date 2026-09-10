@@ -1,0 +1,19 @@
+/* Optional feedback and support only; no changes to the game layout. */
+#feedback-open{min-height:44px}
+#camera-fund{flex:1 1 100%;max-width:360px;text-align:left;font-size:13px;line-height:1.5}
+#camera-fund p{margin:4px 0}
+#camera-fund a{display:inline-flex;align-items:center;min-height:44px;color:inherit;text-decoration:underline}
+#camera-fund progress{display:block;width:100%;height:8px;margin:8px 0;appearance:none;border:0;border-radius:8px;overflow:hidden;background:#dce5df;color:#29955b}
+#camera-fund progress::-webkit-progress-bar{background:#dce5df}
+#camera-fund progress::-webkit-progress-value{background:#29955b}
+#camera-fund progress::-moz-progress-bar{background:#29955b}
+body.playback #camera-fund,body.paint-ready #camera-fund{display:none}
+#feedback-dialog{box-sizing:border-box;width:calc(100% - 32px);max-width:420px;max-height:85dvh;overflow:auto;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--panel,var(--paper,#fff));color:var(--ink,#18283b)}
+#feedback-dialog::backdrop{background:#0008}
+#feedback-dialog h2{font-size:22px;margin:0 0 16px}
+#feedback-dialog label{display:block;margin-bottom:8px}
+#feedback-message{box-sizing:border-box;display:block;width:100%;min-height:120px;padding:12px;font:inherit;font-size:16px;border:1px solid var(--line);border-radius:8px;background:var(--paper,#fff);color:inherit;resize:vertical}
+#feedback-dialog p{font-size:14px;line-height:1.5}
+#feedback-dialog .feedback-actions{display:flex;flex-wrap:wrap;gap:12px}
+#feedback-dialog button,#feedback-dialog a{min-height:44px}
+#feedback-dialog a{display:inline-flex;align-items:center;color:inherit;margin-right:16px}
