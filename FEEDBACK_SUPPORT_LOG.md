@@ -20,3 +20,11 @@ Manual shared goal remains 459/1000. Screenshot 448 was not adopted.
 No unverified tip amount controls: supporter chooses amount on Buy Me a Coffee.
 tests/feedback-completion.cjs covers delay, suppression, cancellation, transition and email encoding.
 Core 323, application 62, playback 18 and diff checks pass. Visual/browser QA still pending.
+
+## Revision 4
+Top-right SVG X buttons with 44px targets on both dialogs.
+Escape cancel is prevented; backdrop has no dismissal handler.
+Leave feedback opens the form above the support dialog; only X dismisses either dialog.
+Reminder uses a localStorage timestamp and seven-day interval checked again before display.
+Cooldown is per browser/device; unavailable or cleared storage cannot preserve it across visits.
+Tests include suppression at six days, eligibility at eight days, and Escape prevention.

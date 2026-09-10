@@ -16,7 +16,8 @@
  const message=document.getElementById('feedback-message');
  opener.addEventListener('click',()=>dialog.showModal());
  document.getElementById('feedback-close').addEventListener('click',()=>dialog.close());
- dialog.addEventListener('close',()=>opener.focus());
+ dialog.addEventListener('cancel',event=>event.preventDefault());
+ dialog.addEventListener('close',()=>{const parent=document.getElementById('completion-dialog');if(parent.open)document.getElementById('completion-feedback').focus();else opener.focus();});
  message.addEventListener('input',()=>message.setCustomValidity(''));
  form.addEventListener('submit',event=>{
   event.preventDefault();
@@ -28,9 +29,11 @@
  });
  // Observe completion without modifying any game model, math or handler.
  const completion=document.getElementById('completion-dialog');
- const key='cube-easy-support-prompt-shown';
+ const key='cube-easy-support-prompt-last-shown';
+ const week=7*24*60*60*1000;
  let shown=false, timer=null, returnFocus=null;
- try{shown=sessionStorage.getItem(key)==='1';}catch{}
+ function coolingDown(){try{const stamp=Number(localStorage.getItem(key));return Number.isFinite(stamp)&&stamp>0&&Date.now()-stamp<week;}catch{return shown;}}
+ shown=coolingDown();
  const complete=()=>document.body.classList.contains('playback') &&
   document.getElementById('solution-caption').textContent==='All six faces match. Nice work!' &&
   !document.getElementById('playback-speed').disabled;
@@ -42,9 +45,9 @@
    clearTimeout(timer);
    timer=setTimeout(()=>{
     timer=null;
-    if(!complete()||document.hidden||document.querySelector('dialog[open]'))return;
+    if(!complete()||document.hidden||document.querySelector('dialog[open]')||coolingDown())return;
     shown=true;
-    try{sessionStorage.setItem(key,'1');}catch{}
+    try{localStorage.setItem(key,String(Date.now()));}catch{}
     returnFocus=document.activeElement;
     completion.showModal();
    },3000);
@@ -54,9 +57,9 @@
  new MutationObserver(observeCompletion).observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['class','disabled']});
  document.addEventListener('visibilitychange',observeCompletion);
  document.getElementById('completion-close').addEventListener('click',()=>completion.close());
+ completion.addEventListener('cancel',event=>event.preventDefault());
  completion.addEventListener('close',()=>{if(returnFocus?.isConnected&&!returnFocus.disabled)returnFocus.focus();});
  document.getElementById('completion-feedback').addEventListener('click',()=>{
-  completion.close();
   dialog.showModal();
  });
 })();

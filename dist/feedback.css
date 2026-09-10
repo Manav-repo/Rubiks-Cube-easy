@@ -42,3 +42,6 @@
 #feedback-dialog button.primary{background:#242424;color:#fff;border-color:#242424}
 #feedback-dialog #camera-fund{border-color:#ddd}
 #completion-dialog :focus-visible,#feedback-dialog :focus-visible{outline:3px solid #3561c6;outline-offset:3px}
+
+#completion-close,#feedback-dialog #feedback-close{display:flex;align-items:center;justify-content:center;position:absolute;right:12px;top:12px;width:44px;height:44px;padding:0;background:transparent;color:#161616;border:0}
+#feedback-dialog h2{padding-right:40px}
