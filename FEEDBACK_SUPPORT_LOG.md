@@ -28,3 +28,9 @@ Leave feedback opens the form above the support dialog; only X dismisses either 
 Reminder uses a localStorage timestamp and seven-day interval checked again before display.
 Cooldown is per browser/device; unavailable or cleared storage cannot preserve it across visits.
 Tests include suppression at six days, eligibility at eight days, and Escape prevention.
+
+## Revision 5 — supplied coffee artwork
+Both support links use the existing dist/assets/cube-easy/coffee.svg unchanged.
+Main button: 24px. Compact modal link: 18px. Flex centering and 8px icon/text gap.
+Decorative empty alt preserves the button text as its accessible name.
+No changes to timing, dismiss behavior or game code. Preview updated; visual browser confirmation pending.

@@ -45,3 +45,7 @@
 
 #completion-close,#feedback-dialog #feedback-close{display:flex;align-items:center;justify-content:center;position:absolute;right:12px;top:12px;width:44px;height:44px;padding:0;background:transparent;color:#161616;border:0}
 #feedback-dialog h2{padding-right:40px}
+
+#completion-support,.feedback-support-links a{gap:8px;align-items:center}
+#completion-support .coffee-button-icon{display:block;width:24px;height:24px;flex:0 0 24px;object-fit:contain}
+#feedback-dialog .feedback-support-links .coffee-button-icon{display:block;width:18px;height:18px;flex:0 0 18px;object-fit:contain}
