@@ -1,0 +1,434 @@
+[
+  {
+    "width": 375,
+    "height": 667,
+    "colorScheme": "light",
+    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "measurements": {
+      "card": {
+        "x": 16,
+        "y": 103.140625,
+        "width": 343,
+        "height": 460.71875,
+        "right": 359,
+        "bottom": 563.859375
+      },
+      "support": {
+        "x": 40,
+        "y": 423.859375,
+        "width": 295,
+        "height": 56,
+        "right": 335,
+        "bottom": 479.859375
+      },
+      "feedback": {
+        "x": 40,
+        "y": 495.859375,
+        "width": 295,
+        "height": 44,
+        "right": 335,
+        "bottom": 539.859375
+      },
+      "img": {
+        "x": 75.671875,
+        "y": 439.859375,
+        "width": 24,
+        "height": 24,
+        "right": 99.671875,
+        "bottom": 463.859375
+      },
+      "lineHeight": 24,
+      "gap": "4px",
+      "modal": true,
+      "overflow": false,
+      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "body": "rgb(245, 245, 245)",
+      "background": "rgb(255, 255, 255)",
+      "ink": "rgb(22, 22, 22)",
+      "button": "rgb(36, 36, 36)",
+      "secondary": "rgb(255, 255, 255)",
+      "border": "rgb(204, 204, 204)",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "blackSurfaces": []
+    },
+    "passed": true
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "colorScheme": "dark",
+    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "measurements": {
+      "card": {
+        "x": 16,
+        "y": 103.140625,
+        "width": 343,
+        "height": 460.71875,
+        "right": 359,
+        "bottom": 563.859375
+      },
+      "support": {
+        "x": 40,
+        "y": 423.859375,
+        "width": 295,
+        "height": 56,
+        "right": 335,
+        "bottom": 479.859375
+      },
+      "feedback": {
+        "x": 40,
+        "y": 495.859375,
+        "width": 295,
+        "height": 44,
+        "right": 335,
+        "bottom": 539.859375
+      },
+      "img": {
+        "x": 75.671875,
+        "y": 439.859375,
+        "width": 24,
+        "height": 24,
+        "right": 99.671875,
+        "bottom": 463.859375
+      },
+      "lineHeight": 24,
+      "gap": "4px",
+      "modal": true,
+      "overflow": false,
+      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "body": "rgb(18, 18, 18)",
+      "background": "rgb(43, 43, 43)",
+      "ink": "rgb(255, 255, 255)",
+      "button": "rgb(242, 242, 242)",
+      "secondary": "rgb(26, 26, 26)",
+      "border": "rgb(96, 96, 96)",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "blackSurfaces": []
+    },
+    "passed": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "colorScheme": "light",
+    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "measurements": {
+      "card": {
+        "x": 16,
+        "y": 191.640625,
+        "width": 358,
+        "height": 460.71875,
+        "right": 374,
+        "bottom": 652.359375
+      },
+      "support": {
+        "x": 40,
+        "y": 512.359375,
+        "width": 310,
+        "height": 56,
+        "right": 350,
+        "bottom": 568.359375
+      },
+      "feedback": {
+        "x": 40,
+        "y": 584.359375,
+        "width": 310,
+        "height": 44,
+        "right": 350,
+        "bottom": 628.359375
+      },
+      "img": {
+        "x": 83.171875,
+        "y": 528.359375,
+        "width": 24,
+        "height": 24,
+        "right": 107.171875,
+        "bottom": 552.359375
+      },
+      "lineHeight": 24,
+      "gap": "4px",
+      "modal": true,
+      "overflow": false,
+      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "body": "rgb(245, 245, 245)",
+      "background": "rgb(255, 255, 255)",
+      "ink": "rgb(22, 22, 22)",
+      "button": "rgb(36, 36, 36)",
+      "secondary": "rgb(255, 255, 255)",
+      "border": "rgb(204, 204, 204)",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "blackSurfaces": []
+    },
+    "passed": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "colorScheme": "dark",
+    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "measurements": {
+      "card": {
+        "x": 16,
+        "y": 191.640625,
+        "width": 358,
+        "height": 460.71875,
+        "right": 374,
+        "bottom": 652.359375
+      },
+      "support": {
+        "x": 40,
+        "y": 512.359375,
+        "width": 310,
+        "height": 56,
+        "right": 350,
+        "bottom": 568.359375
+      },
+      "feedback": {
+        "x": 40,
+        "y": 584.359375,
+        "width": 310,
+        "height": 44,
+        "right": 350,
+        "bottom": 628.359375
+      },
+      "img": {
+        "x": 83.171875,
+        "y": 528.359375,
+        "width": 24,
+        "height": 24,
+        "right": 107.171875,
+        "bottom": 552.359375
+      },
+      "lineHeight": 24,
+      "gap": "4px",
+      "modal": true,
+      "overflow": false,
+      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "body": "rgb(18, 18, 18)",
+      "background": "rgb(43, 43, 43)",
+      "ink": "rgb(255, 255, 255)",
+      "button": "rgb(242, 242, 242)",
+      "secondary": "rgb(26, 26, 26)",
+      "border": "rgb(96, 96, 96)",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "blackSurfaces": []
+    },
+    "passed": true
+  },
+  {
+    "width": 360,
+    "height": 800,
+    "colorScheme": "light",
+    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "measurements": {
+      "card": {
+        "x": 16,
+        "y": 169.640625,
+        "width": 328,
+        "height": 460.71875,
+        "right": 344,
+        "bottom": 630.359375
+      },
+      "support": {
+        "x": 40,
+        "y": 490.359375,
+        "width": 280,
+        "height": 56,
+        "right": 320,
+        "bottom": 546.359375
+      },
+      "feedback": {
+        "x": 40,
+        "y": 562.359375,
+        "width": 280,
+        "height": 44,
+        "right": 320,
+        "bottom": 606.359375
+      },
+      "img": {
+        "x": 68.171875,
+        "y": 506.359375,
+        "width": 24,
+        "height": 24,
+        "right": 92.171875,
+        "bottom": 530.359375
+      },
+      "lineHeight": 24,
+      "gap": "4px",
+      "modal": true,
+      "overflow": false,
+      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "body": "rgb(245, 245, 245)",
+      "background": "rgb(255, 255, 255)",
+      "ink": "rgb(22, 22, 22)",
+      "button": "rgb(36, 36, 36)",
+      "secondary": "rgb(255, 255, 255)",
+      "border": "rgb(204, 204, 204)",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "blackSurfaces": []
+    },
+    "passed": true
+  },
+  {
+    "width": 360,
+    "height": 800,
+    "colorScheme": "dark",
+    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "measurements": {
+      "card": {
+        "x": 16,
+        "y": 169.640625,
+        "width": 328,
+        "height": 460.71875,
+        "right": 344,
+        "bottom": 630.359375
+      },
+      "support": {
+        "x": 40,
+        "y": 490.359375,
+        "width": 280,
+        "height": 56,
+        "right": 320,
+        "bottom": 546.359375
+      },
+      "feedback": {
+        "x": 40,
+        "y": 562.359375,
+        "width": 280,
+        "height": 44,
+        "right": 320,
+        "bottom": 606.359375
+      },
+      "img": {
+        "x": 68.171875,
+        "y": 506.359375,
+        "width": 24,
+        "height": 24,
+        "right": 92.171875,
+        "bottom": 530.359375
+      },
+      "lineHeight": 24,
+      "gap": "4px",
+      "modal": true,
+      "overflow": false,
+      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "body": "rgb(18, 18, 18)",
+      "background": "rgb(43, 43, 43)",
+      "ink": "rgb(255, 255, 255)",
+      "button": "rgb(242, 242, 242)",
+      "secondary": "rgb(26, 26, 26)",
+      "border": "rgb(96, 96, 96)",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "blackSurfaces": []
+    },
+    "passed": true
+  },
+  {
+    "width": 1280,
+    "height": 900,
+    "colorScheme": "light",
+    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "measurements": {
+      "card": {
+        "x": 856,
+        "y": 24,
+        "width": 400,
+        "height": 460.71875,
+        "right": 1256,
+        "bottom": 484.71875
+      },
+      "support": {
+        "x": 880,
+        "y": 344.71875,
+        "width": 352,
+        "height": 56,
+        "right": 1232,
+        "bottom": 400.71875
+      },
+      "feedback": {
+        "x": 880,
+        "y": 416.71875,
+        "width": 352,
+        "height": 44,
+        "right": 1232,
+        "bottom": 460.71875
+      },
+      "img": {
+        "x": 944.171875,
+        "y": 360.71875,
+        "width": 24,
+        "height": 24,
+        "right": 968.171875,
+        "bottom": 384.71875
+      },
+      "lineHeight": 24,
+      "gap": "4px",
+      "modal": false,
+      "overflow": false,
+      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "body": "rgb(250, 250, 244)",
+      "background": "rgb(255, 255, 255)",
+      "ink": "rgb(22, 22, 22)",
+      "button": "rgb(36, 36, 36)",
+      "secondary": "rgb(255, 255, 255)",
+      "border": "rgb(204, 204, 204)",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "blackSurfaces": []
+    },
+    "passed": true
+  },
+  {
+    "width": 1280,
+    "height": 900,
+    "colorScheme": "dark",
+    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "measurements": {
+      "card": {
+        "x": 856,
+        "y": 24,
+        "width": 400,
+        "height": 460.71875,
+        "right": 1256,
+        "bottom": 484.71875
+      },
+      "support": {
+        "x": 880,
+        "y": 344.71875,
+        "width": 352,
+        "height": 56,
+        "right": 1232,
+        "bottom": 400.71875
+      },
+      "feedback": {
+        "x": 880,
+        "y": 416.71875,
+        "width": 352,
+        "height": 44,
+        "right": 1232,
+        "bottom": 460.71875
+      },
+      "img": {
+        "x": 944.171875,
+        "y": 360.71875,
+        "width": 24,
+        "height": 24,
+        "right": 968.171875,
+        "bottom": 384.71875
+      },
+      "lineHeight": 24,
+      "gap": "4px",
+      "modal": false,
+      "overflow": false,
+      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "body": "rgb(18, 18, 18)",
+      "background": "rgb(43, 43, 43)",
+      "ink": "rgb(255, 255, 255)",
+      "button": "rgb(242, 242, 242)",
+      "secondary": "rgb(26, 26, 26)",
+      "border": "rgb(96, 96, 96)",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "blackSurfaces": []
+    },
+    "passed": true
+  }
+]

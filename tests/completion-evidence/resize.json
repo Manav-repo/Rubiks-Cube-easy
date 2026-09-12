@@ -1,0 +1,6 @@
+{
+  "mobileToDesktop": true,
+  "desktopToMobile": true,
+  "noForcedFeedback": true,
+  "passed": true
+}

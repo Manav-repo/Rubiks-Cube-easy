@@ -1,20 +1,22 @@
 /* Manually maintained camera fund. No balance API or analytics. */
 (()=>{
- const raised=459, goal=1000;
+ const raised=459; // Continuous total; the new camera's target is not confirmed.
  const recipient='manav.uix@gmail.com';
  for(const prefix of ['camera-fund','completion-fund']){
  const amount=document.getElementById(prefix+'-amount');
  const progress=document.getElementById(prefix+'-progress');
- amount.textContent='$'+raised+' of $'+goal+' raised';
- progress.max=goal;
- progress.value=Math.max(0,Math.min(raised,goal));
- progress.setAttribute('aria-valuetext',amount.textContent);
+ amount.textContent='$'+raised+' raised · Goal: $— (pending confirmation)';
+ progress.removeAttribute('value');
+ progress.removeAttribute('max');
+ progress.setAttribute('aria-valuetext','Target pending confirmation; '+raised+' dollars raised');
  }
  const dialog=document.getElementById('feedback-dialog');
  const opener=document.getElementById('feedback-open');
  const form=document.getElementById('feedback-form');
  const message=document.getElementById('feedback-message');
- opener.addEventListener('click',()=>dialog.showModal());
+ const mobile=matchMedia('(max-width:680px)');
+ const present=card=>mobile.matches?card.showModal():card.show();
+ opener.addEventListener('click',()=>present(dialog));
  document.getElementById('feedback-close').addEventListener('click',()=>dialog.close());
  dialog.addEventListener('cancel',event=>event.preventDefault());
  dialog.addEventListener('close',()=>{const parent=document.getElementById('completion-dialog');if(parent.open)document.getElementById('completion-feedback').focus();else opener.focus();});
@@ -49,7 +51,7 @@
     shown=true;
     try{localStorage.setItem(key,String(Date.now()));}catch{}
     returnFocus=document.activeElement;
-    completion.showModal();
+    present(completion);
    },3000);
   }
   wasComplete=now;
@@ -60,6 +62,10 @@
  completion.addEventListener('cancel',event=>event.preventDefault());
  completion.addEventListener('close',()=>{if(returnFocus?.isConnected&&!returnFocus.disabled)returnFocus.focus();});
  document.getElementById('completion-feedback').addEventListener('click',()=>{
-  dialog.showModal();
+  present(dialog);
+ });
+ // A viewport change must also remove/add native modality, not just move the box.
+ mobile.addEventListener('change',()=>{
+  for(const card of [completion,dialog])if(card.open){card.close();present(card);}
  });
 })();
