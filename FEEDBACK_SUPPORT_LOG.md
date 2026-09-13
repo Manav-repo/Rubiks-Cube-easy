@@ -122,3 +122,20 @@ including all seven Learn stages/recalls and Fix My Cube playback. Refreshed
 screenshots and the report are in `tests/design-evidence`. `git diff --check`
 passed. Published the byte-identical `dist` output successfully to
 https://cube-brainiac.manav-uix.chatgpt.site with public access confirmed.
+
+## 2026-09-13 — New light notification reference
+
+Replaced the completion card heading and story with the new reference, added
+the supplied DJI image, an “Or” divider, and the exact Mail.svg beside
+“Leave Feedback”. The notification stays white with black text and a charcoal
+support button in both system themes. Existing IDs, completion timing,
+cooldown, close/feedback handlers, mobile modality, and desktop side placement
+are preserved. The mail and coffee icons follow text line-height with 4px gaps.
+
+Eight viewport/theme contexts and resize/feedback behavior checks passed;
+screenshots were visually inspected. Funding figures remain unchanged pending
+confirmation of the screenshot's $448/$950 versus the existing $459 raised.
+LICENSE.PROPOSED.md is a draft only; the existing license and repository
+visibility have not yet been changed. Owner confirmation is needed on the
+hosted-app-use exception. This draft expressly preserves previous license grants,
+GitHub platform rights, and third-party licenses.

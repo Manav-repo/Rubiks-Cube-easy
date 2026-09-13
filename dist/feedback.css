@@ -46,3 +46,25 @@
 
 /* Exact supplied close asset; mask lets currentColor follow the device theme. */
 .close-icon{display:block;width:24px;height:24px;background:currentColor;mask:url("assets/cube-easy/close.svg") center / contain no-repeat}
+
+/* The completion notification intentionally stays light in both device themes. */
+#completion-dialog{--completion-surface:#fff;--completion-ink:#000;--completion-secondary:#fff;--completion-line:#ccc;--completion-primary:#242424;--completion-on-primary:#f2f2f2;--completion-track:#fff;--completion-progress:#2fc653;width:600px;color-scheme:light}
+#completion-dialog h2{font-size:28px;font-weight:500;line-height:1.2}
+.completion-story{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);align-items:start}
+#completion-dialog .completion-story p{margin:0;font-size:20px;line-height:1.2}
+.completion-camera{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:20px}
+#completion-dialog #completion-fund-amount{font-size:20px;font-weight:500}
+#completion-dialog #completion-fund-progress{border-color:#aad1ac;margin:8px 0 var(--space-3)}
+#completion-dialog #completion-support{font-size:20px;line-height:24px}
+.completion-or{display:flex;align-items:center;justify-content:center;gap:var(--space-xs);margin:8px 0;color:#808080;line-height:20px}
+.completion-or::before,.completion-or::after{content:"";width:44px;border-top:1px solid currentColor}
+#completion-dialog #completion-feedback{display:flex;align-items:center;justify-content:center;gap:var(--space-xs);margin:0;font-size:20px;color:#242424}
+.mail-icon{display:block;width:1lh;height:1lh;flex:0 0 1lh;background:#000;mask:url("assets/cube-easy/mail.svg") center / contain no-repeat}
+@media(max-width:680px){
+ #completion-dialog{width:calc(100% - max(16px, env(safe-area-inset-left)) - max(16px, env(safe-area-inset-right)))}
+ #completion-dialog h2{font-size:24px;margin-bottom:var(--space-3)}
+ .completion-story{gap:var(--space-3)}
+ #completion-dialog .completion-story p{font-size:16px;line-height:1.3}
+ .completion-camera{border-radius:16px}
+ #completion-dialog #completion-support,#completion-dialog #completion-feedback{font-size:16px}
+}
