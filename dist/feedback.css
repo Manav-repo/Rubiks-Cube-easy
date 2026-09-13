@@ -43,3 +43,6 @@
  #completion-dialog h2,#completion-dialog p{margin-bottom:var(--space-3)}
  #completion-dialog section{margin-top:var(--space-3)}
 }
+
+/* Exact supplied close asset; mask lets currentColor follow the device theme. */
+.close-icon{display:block;width:24px;height:24px;background:currentColor;mask:url("assets/cube-easy/close.svg") center / contain no-repeat}

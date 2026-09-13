@@ -1,6 +1,6 @@
 # Cube Easy mobile design implementation
 
-Base: `d14e01d` (completed P0–P3 fixes). Branch: `codex/cube-easy-mobile-design`.
+Base: `d14e01d` (completed P0–P3 fixes). Current review branch: `Mcode/completion-card-final`.
 
 This pass implements the user-supplied mobile design spec and screenshots. The
 user's explicit requirement is that appearance follows the device system choice,

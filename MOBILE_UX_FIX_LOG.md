@@ -4,7 +4,7 @@ Status: in progress; not complete until the entire fresh-storage checklist passe
 
 Repository: https://github.com/Manav-repo/Rubiks-Cube-easy
 Base: 61577392880fbc8f5f485be9c99c53d779ffda72
-Review branch: codex/mobile-ux-fixes
+Review branch: Mcode/completion-card-final
 
 The initial folder was an empty Git repository with no remote, commits, or uncommitted changes. Fetched the requested repository and created this branch. Read both required documents before editing.
 

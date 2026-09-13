@@ -37,7 +37,7 @@ No changes to timing, dismiss behavior or game code. Preview updated; visual bro
 
 ## 2026-09-12 — One completion card, confirmed palette, device layout
 
-Branch: `codex/completion-card-final`, based on `a076727` from the private
+Current review branch: `Mcode/completion-card-final`, based on `a076727` from the private
 `Manav-repo/Rubiks-Cube-easy` repository. This update supersedes any earlier
 support-close → automatic-feedback sequence. The two choices are independent,
 stacked in the same card as specified by the reference (support first, outlined
@@ -101,10 +101,24 @@ feedback below). Feedback opens only after its own explicit action.
   These are Chromium emulation checks; physical iPhone/Android hardware was not used.
 - `git diff --check`: passed.
 
-### Outstanding — exact close asset
+### 2026-09-13 — Exact close asset and final model wording
 
-The supplied close-X SVG could not be located in the local asset folder or this
-branch. `Assests/logo.svg` and `dist/assets/cube-easy/x.svg` are the X social logo,
-not a close glyph. The existing inline close SVG is retained pending the user's
-asset path or Figma node. No newly invented replacement was added. This item is
-NOT verified and the entire task must not be called fully complete until resolved.
+Resolved the missing asset using `Assests/x close.svg`, copied byte-for-byte to
+`dist/assets/cube-easy/close.svg`. Both close buttons use this asset as a mask
+so its glyph follows the system theme. Camera copy now says
+“DJI OSMO Pocket 4p Vlog combo”; $459 and the pending target are unchanged.
+
+Reran completion checks in all eight viewport/theme contexts and the resize
+check successfully, with refreshed screenshots and results in
+`tests/completion-evidence`. Visually inspected the dark mobile screenshot:
+the supplied close glyph and BMC asset render and both actions fit onscreen.
+Core (323), planner (30), app-flow (62), playback (18), and feedback-completion
+checks passed again. Protected cube and saved-progress source remains unchanged.
+README now includes the public demo link and Mcode attribution; current review
+branch is `Mcode/completion-card-final`. Historical Git commits are not rewritten.
+
+Full fresh-storage mobile checklist passed at 375×667, 390×844 and 360×800,
+including all seven Learn stages/recalls and Fix My Cube playback. Refreshed
+screenshots and the report are in `tests/design-evidence`. `git diff --check`
+passed. Published the byte-identical `dist` output successfully to
+https://cube-brainiac.manav-uix.chatgpt.site with public access confirmed.

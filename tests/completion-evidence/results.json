@@ -3,39 +3,39 @@
     "width": 375,
     "height": 667,
     "colorScheme": "light",
-    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "sourceHash": "6b861ac8649db97596f22461fc05183eb40daf8d8d50415cdb198aab9fc925af",
     "measurements": {
       "card": {
         "x": 16,
-        "y": 103.140625,
+        "y": 91.546875,
         "width": 343,
-        "height": 460.71875,
+        "height": 483.90625,
         "right": 359,
-        "bottom": 563.859375
+        "bottom": 575.453125
       },
       "support": {
         "x": 40,
-        "y": 423.859375,
+        "y": 435.453125,
         "width": 295,
         "height": 56,
         "right": 335,
-        "bottom": 479.859375
+        "bottom": 491.453125
       },
       "feedback": {
         "x": 40,
-        "y": 495.859375,
+        "y": 507.453125,
         "width": 295,
         "height": 44,
         "right": 335,
-        "bottom": 539.859375
+        "bottom": 551.453125
       },
       "img": {
         "x": 75.671875,
-        "y": 439.859375,
+        "y": 451.453125,
         "width": 24,
         "height": 24,
         "right": 99.671875,
-        "bottom": 463.859375
+        "bottom": 475.453125
       },
       "lineHeight": 24,
       "gap": "4px",
@@ -48,7 +48,7 @@
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI OSMO Pocket 4p Vlog combo to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
       "blackSurfaces": []
     },
     "passed": true
@@ -57,39 +57,39 @@
     "width": 375,
     "height": 667,
     "colorScheme": "dark",
-    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "sourceHash": "6b861ac8649db97596f22461fc05183eb40daf8d8d50415cdb198aab9fc925af",
     "measurements": {
       "card": {
         "x": 16,
-        "y": 103.140625,
+        "y": 91.546875,
         "width": 343,
-        "height": 460.71875,
+        "height": 483.90625,
         "right": 359,
-        "bottom": 563.859375
+        "bottom": 575.453125
       },
       "support": {
         "x": 40,
-        "y": 423.859375,
+        "y": 435.453125,
         "width": 295,
         "height": 56,
         "right": 335,
-        "bottom": 479.859375
+        "bottom": 491.453125
       },
       "feedback": {
         "x": 40,
-        "y": 495.859375,
+        "y": 507.453125,
         "width": 295,
         "height": 44,
         "right": 335,
-        "bottom": 539.859375
+        "bottom": 551.453125
       },
       "img": {
         "x": 75.671875,
-        "y": 439.859375,
+        "y": 451.453125,
         "width": 24,
         "height": 24,
         "right": 99.671875,
-        "bottom": 463.859375
+        "bottom": 475.453125
       },
       "lineHeight": 24,
       "gap": "4px",
@@ -102,7 +102,7 @@
       "button": "rgb(242, 242, 242)",
       "secondary": "rgb(26, 26, 26)",
       "border": "rgb(96, 96, 96)",
-      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI OSMO Pocket 4p Vlog combo to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
       "blackSurfaces": []
     },
     "passed": true
@@ -111,7 +111,7 @@
     "width": 390,
     "height": 844,
     "colorScheme": "light",
-    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "sourceHash": "6b861ac8649db97596f22461fc05183eb40daf8d8d50415cdb198aab9fc925af",
     "measurements": {
       "card": {
         "x": 16,
@@ -156,7 +156,7 @@
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI OSMO Pocket 4p Vlog combo to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
       "blackSurfaces": []
     },
     "passed": true
@@ -165,7 +165,7 @@
     "width": 390,
     "height": 844,
     "colorScheme": "dark",
-    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "sourceHash": "6b861ac8649db97596f22461fc05183eb40daf8d8d50415cdb198aab9fc925af",
     "measurements": {
       "card": {
         "x": 16,
@@ -210,7 +210,7 @@
       "button": "rgb(242, 242, 242)",
       "secondary": "rgb(26, 26, 26)",
       "border": "rgb(96, 96, 96)",
-      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI OSMO Pocket 4p Vlog combo to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
       "blackSurfaces": []
     },
     "passed": true
@@ -219,39 +219,39 @@
     "width": 360,
     "height": 800,
     "colorScheme": "light",
-    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "sourceHash": "6b861ac8649db97596f22461fc05183eb40daf8d8d50415cdb198aab9fc925af",
     "measurements": {
       "card": {
         "x": 16,
-        "y": 169.640625,
+        "y": 158.046875,
         "width": 328,
-        "height": 460.71875,
+        "height": 483.90625,
         "right": 344,
-        "bottom": 630.359375
+        "bottom": 641.953125
       },
       "support": {
         "x": 40,
-        "y": 490.359375,
+        "y": 501.953125,
         "width": 280,
         "height": 56,
         "right": 320,
-        "bottom": 546.359375
+        "bottom": 557.953125
       },
       "feedback": {
         "x": 40,
-        "y": 562.359375,
+        "y": 573.953125,
         "width": 280,
         "height": 44,
         "right": 320,
-        "bottom": 606.359375
+        "bottom": 617.953125
       },
       "img": {
         "x": 68.171875,
-        "y": 506.359375,
+        "y": 517.953125,
         "width": 24,
         "height": 24,
         "right": 92.171875,
-        "bottom": 530.359375
+        "bottom": 541.953125
       },
       "lineHeight": 24,
       "gap": "4px",
@@ -264,7 +264,7 @@
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI OSMO Pocket 4p Vlog combo to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
       "blackSurfaces": []
     },
     "passed": true
@@ -273,39 +273,39 @@
     "width": 360,
     "height": 800,
     "colorScheme": "dark",
-    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "sourceHash": "6b861ac8649db97596f22461fc05183eb40daf8d8d50415cdb198aab9fc925af",
     "measurements": {
       "card": {
         "x": 16,
-        "y": 169.640625,
+        "y": 158.046875,
         "width": 328,
-        "height": 460.71875,
+        "height": 483.90625,
         "right": 344,
-        "bottom": 630.359375
+        "bottom": 641.953125
       },
       "support": {
         "x": 40,
-        "y": 490.359375,
+        "y": 501.953125,
         "width": 280,
         "height": 56,
         "right": 320,
-        "bottom": 546.359375
+        "bottom": 557.953125
       },
       "feedback": {
         "x": 40,
-        "y": 562.359375,
+        "y": 573.953125,
         "width": 280,
         "height": 44,
         "right": 320,
-        "bottom": 606.359375
+        "bottom": 617.953125
       },
       "img": {
         "x": 68.171875,
-        "y": 506.359375,
+        "y": 517.953125,
         "width": 24,
         "height": 24,
         "right": 92.171875,
-        "bottom": 530.359375
+        "bottom": 541.953125
       },
       "lineHeight": 24,
       "gap": "4px",
@@ -318,7 +318,7 @@
       "button": "rgb(242, 242, 242)",
       "secondary": "rgb(26, 26, 26)",
       "border": "rgb(96, 96, 96)",
-      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI OSMO Pocket 4p Vlog combo to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
       "blackSurfaces": []
     },
     "passed": true
@@ -327,7 +327,7 @@
     "width": 1280,
     "height": 900,
     "colorScheme": "light",
-    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "sourceHash": "6b861ac8649db97596f22461fc05183eb40daf8d8d50415cdb198aab9fc925af",
     "measurements": {
       "card": {
         "x": 856,
@@ -372,7 +372,7 @@
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI OSMO Pocket 4p Vlog combo to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
       "blackSurfaces": []
     },
     "passed": true
@@ -381,7 +381,7 @@
     "width": 1280,
     "height": 900,
     "colorScheme": "dark",
-    "sourceHash": "82ebbf82eb4381e1eb987485bf6ea210384cb0b00f300247a26d6a1c64d84a70",
+    "sourceHash": "6b861ac8649db97596f22461fc05183eb40daf8d8d50415cdb198aab9fc925af",
     "measurements": {
       "card": {
         "x": 856,
@@ -426,7 +426,7 @@
       "button": "rgb(242, 242, 242)",
       "secondary": "rgb(26, 26, 26)",
       "border": "rgb(96, 96, 96)",
-      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI Osmo Pocket 4P to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
+      "copy": "Nice work!You’ve finished the moves. I hope your cube matches too.Saving up for a DJI OSMO Pocket 4p Vlog combo to make better tutorial videos ❤️$459 raised · Goal: $— (pending confirmation)Support my camera fund ↗Leave feedback",
       "blackSurfaces": []
     },
     "passed": true

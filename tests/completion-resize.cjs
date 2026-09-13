@@ -1,4 +1,4 @@
-const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'/Users/manav/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs');
 (async()=>{const browser=await chromium.launch();const page=await browser.newPage({viewport:{width:390,height:844}});await page.goto('http://127.0.0.1:4174');await page.locator('#calibration-skip').click();await page.evaluate(()=>document.getElementById('completion-dialog').showModal());
 assert.equal(await page.locator('#completion-support').getAttribute('href'),'https://buymeacoffee.com/manavbuilds');

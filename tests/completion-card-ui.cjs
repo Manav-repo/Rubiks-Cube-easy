@@ -1,4 +1,4 @@
-const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'/Users/manav/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),cp=require('node:child_process'),crypto=require('node:crypto');
 const out='tests/completion-evidence';fs.mkdirSync(out,{recursive:true});
 const files=['dist/index.html','dist/feedback.css','dist/mobile-design.css','dist/js/feedback.js','dist/js/support.js'];
@@ -6,6 +6,7 @@ const fingerprint=()=>crypto.createHash('sha256').update(files.map(f=>fs.readFil
 const sourceHash=fingerprint();
 for(const f of ['dist/js/app.js','dist/js/cube-view.js','dist/js/layout.js','dist/js/lessons.js','dist/js/stage-planner.js','dist/js/solver-worker.js','dist/vendor/cube.js','dist/js/theme.js'])assert.equal(fs.readFileSync(f,'utf8'),cp.execFileSync('git',['show',`a076727:${f}`],{encoding:'utf8'}),f+' unchanged');
 assert.deepEqual(fs.readFileSync('dist/assets/cube-easy/coffee.svg'),fs.readFileSync('Assests/Buy me coffee.svg'));
+assert.deepEqual(fs.readFileSync('dist/assets/cube-easy/close.svg'),fs.readFileSync('Assests/x close.svg'));
 (async()=>{
  const browser=await chromium.launch();const result=[];
  for(const [width,height] of [[375,667],[390,844],[360,800],[1280,900]])for(const colorScheme of ['light','dark']){
@@ -20,7 +21,7 @@ assert.deepEqual(fs.readFileSync('dist/assets/cube-easy/coffee.svg'),fs.readFile
    const r=e=>{const v=e.getBoundingClientRect();return {x:v.x,y:v.y,width:v.width,height:v.height,right:v.right,bottom:v.bottom}};
    return {card:r(card),support:r(btn),feedback:r(feedback),img:r(img),lineHeight:parseFloat(getComputedStyle(btn).lineHeight),gap:getComputedStyle(btn).gap,modal:card.matches(':modal'),overflow:card.scrollHeight>card.clientHeight,amount:document.querySelector('#completion-fund-amount').textContent,body:getComputedStyle(document.body).backgroundColor,background:getComputedStyle(card).backgroundColor,ink:getComputedStyle(card).color,button:getComputedStyle(btn).backgroundColor,secondary:getComputedStyle(feedback).backgroundColor,border:getComputedStyle(feedback).borderTopColor,copy:card.textContent,blackSurfaces:[card,...card.querySelectorAll('*')].filter(e=>getComputedStyle(e).backgroundColor==='rgb(0, 0, 0)').map(e=>e.id||e.tagName)};
   });
-  assert.equal(m.modal,width<681);assert.equal(m.overflow,false);assert.ok(m.card.x>=0&&m.card.y>=0&&m.card.right<=width&&m.card.bottom<=height);assert.ok(m.support.height>=44&&m.feedback.height>=44);assert.equal(m.img.height,m.lineHeight);assert.equal(m.gap,'4px');assert.ok(m.copy.includes('DJI Osmo Pocket 4P'));assert.ok(!m.copy.includes('Sony'));assert.equal(m.amount,'$459 raised · Goal: $— (pending confirmation)');assert.deepEqual(m.blackSurfaces,[]);
+  assert.equal(m.modal,width<681);assert.equal(m.overflow,false);assert.ok(m.card.x>=0&&m.card.y>=0&&m.card.right<=width&&m.card.bottom<=height);assert.ok(m.support.height>=44&&m.feedback.height>=44);assert.equal(m.img.height,m.lineHeight);assert.equal(m.gap,'4px');assert.ok(m.copy.includes('DJI OSMO Pocket 4p Vlog combo'));assert.ok(!m.copy.includes('Sony'));assert.equal(m.amount,'$459 raised · Goal: $— (pending confirmation)');assert.deepEqual(m.blackSurfaces,[]);
   if(width<681){assert.ok(Math.abs(m.card.x+m.card.width/2-width/2)<1);assert.ok(Math.abs(m.card.y+m.card.height/2-height/2)<1);}else assert.ok(m.card.x>width/2);
   if(colorScheme==='dark'){assert.equal(m.body,'rgb(18, 18, 18)');assert.equal(m.background,'rgb(43, 43, 43)');assert.equal(m.ink,'rgb(255, 255, 255)');assert.equal(m.button,'rgb(242, 242, 242)');assert.equal(m.secondary,'rgb(26, 26, 26)');assert.equal(m.border,'rgb(96, 96, 96)');}
   await page.screenshot({path:`${out}/${width}-${colorScheme}.png`});
