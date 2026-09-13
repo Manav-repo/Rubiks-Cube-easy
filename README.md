@@ -2,9 +2,9 @@
 
 Cube Brainiac is a free browser app that helps you learn to solve a Rubik’s Cube or find moves for the cube in your hands.
 
-[Open the live demo](https://cube-brainiac.manav-uix.chatgpt.site)
+[Open the live demo](https://cube-brainiac.manav-uix.chatgpt.site/)
 
-The hosted demo currently has restricted access. You can also run the complete app locally using the steps below.
+You can also run the complete app locally using the steps below.
 
 ## Why I built it
 
@@ -53,7 +53,7 @@ In **Settings → Pages**, choose **Deploy from a branch**, then **main** and **
 
 ## Credits & connect
 
-Built by Manav. The app code is MIT licensed; cubejs and bundled fonts retain their own license files.
+Built by Manav with Mcode. The current original app code is proprietary: source reuse, modification, redistribution and sale require written permission. You may use the official hosted app to learn and solve cubes. See [LICENSE](LICENSE). Third-party materials retain their own licenses; earlier MIT grants and GitHub platform rights are unaffected.
 
 - [Support this project](https://buymeacoffee.com/manavbuilds)
 - [X](https://x.com/Manavdoedits)
