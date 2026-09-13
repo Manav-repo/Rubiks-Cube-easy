@@ -1,14 +1,14 @@
 /* Manually maintained camera fund. No balance API or analytics. */
 (()=>{
- const raised=459; // Continuous total; the new camera's target is not confirmed.
+ const raised=448, goal=950; // Owner's latest reference amounts; manually maintained.
  const recipient='manav.uix@gmail.com';
  for(const prefix of ['camera-fund','completion-fund']){
  const amount=document.getElementById(prefix+'-amount');
  const progress=document.getElementById(prefix+'-progress');
- amount.textContent='$'+raised+' raised · Goal: $— (pending confirmation)';
- progress.removeAttribute('value');
- progress.removeAttribute('max');
- progress.setAttribute('aria-valuetext','Target pending confirmation; '+raised+' dollars raised');
+ amount.textContent='$'+raised+' of $'+goal+' raised';
+ progress.value=raised;
+ progress.max=goal;
+ progress.setAttribute('aria-valuetext',raised+' of '+goal+' dollars raised');
  }
  const dialog=document.getElementById('feedback-dialog');
  const opener=document.getElementById('feedback-open');

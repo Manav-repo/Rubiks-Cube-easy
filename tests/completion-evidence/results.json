@@ -3,52 +3,52 @@
     "width": 375,
     "height": 667,
     "colorScheme": "light",
-    "sourceHash": "40a10a8e0bb07b33d60ac8a1a2b4aa961d7d034d1ee7070e6231c683b5b5b4a2",
+    "sourceHash": "aa3806735c6055965c279211bdb43fbeea092588c12f427f66ed36a102bf9a4c",
     "measurements": {
       "card": {
         "x": 16,
-        "y": 86.3125,
+        "y": 100.3125,
         "width": 343,
-        "height": 494.375,
+        "height": 466.375,
         "right": 359,
-        "bottom": 580.6875
+        "bottom": 566.6875
       },
       "support": {
         "x": 40,
-        "y": 420.6875,
+        "y": 406.6875,
         "width": 295,
         "height": 56,
         "right": 335,
-        "bottom": 476.6875
+        "bottom": 462.6875
       },
       "feedback": {
         "x": 40,
-        "y": 512.6875,
+        "y": 498.6875,
         "width": 295,
         "height": 44,
         "right": 335,
-        "bottom": 556.6875
+        "bottom": 542.6875
       },
       "img": {
         "x": 85.890625,
-        "y": 436.6875,
+        "y": 422.6875,
         "width": 24,
         "height": 24,
         "right": 109.890625,
-        "bottom": 460.6875
+        "bottom": 446.6875
       },
       "lineHeight": 24,
       "gap": "4px",
       "modal": true,
       "overflow": false,
-      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "amount": "$448 of $950 raised",
       "body": "rgb(245, 245, 245)",
       "background": "rgb(255, 255, 255)",
       "ink": "rgb(0, 0, 0)",
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$459 raised · Goal: $— (pending confirmation)Support my camera fund\nOr\nLeave Feedback\n",
+      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$448 of $950 raisedSupport my camera fund\nOr\nLeave Feedback\n",
       "blackSurfaces": [
         "SPAN",
         "SPAN"
@@ -60,52 +60,52 @@
     "width": 375,
     "height": 667,
     "colorScheme": "dark",
-    "sourceHash": "40a10a8e0bb07b33d60ac8a1a2b4aa961d7d034d1ee7070e6231c683b5b5b4a2",
+    "sourceHash": "aa3806735c6055965c279211bdb43fbeea092588c12f427f66ed36a102bf9a4c",
     "measurements": {
       "card": {
         "x": 16,
-        "y": 86.3125,
+        "y": 100.3125,
         "width": 343,
-        "height": 494.375,
+        "height": 466.375,
         "right": 359,
-        "bottom": 580.6875
+        "bottom": 566.6875
       },
       "support": {
         "x": 40,
-        "y": 420.6875,
+        "y": 406.6875,
         "width": 295,
         "height": 56,
         "right": 335,
-        "bottom": 476.6875
+        "bottom": 462.6875
       },
       "feedback": {
         "x": 40,
-        "y": 512.6875,
+        "y": 498.6875,
         "width": 295,
         "height": 44,
         "right": 335,
-        "bottom": 556.6875
+        "bottom": 542.6875
       },
       "img": {
         "x": 85.890625,
-        "y": 436.6875,
+        "y": 422.6875,
         "width": 24,
         "height": 24,
         "right": 109.890625,
-        "bottom": 460.6875
+        "bottom": 446.6875
       },
       "lineHeight": 24,
       "gap": "4px",
       "modal": true,
       "overflow": false,
-      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "amount": "$448 of $950 raised",
       "body": "rgb(18, 18, 18)",
       "background": "rgb(255, 255, 255)",
       "ink": "rgb(0, 0, 0)",
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$459 raised · Goal: $— (pending confirmation)Support my camera fund\nOr\nLeave Feedback\n",
+      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$448 of $950 raisedSupport my camera fund\nOr\nLeave Feedback\n",
       "blackSurfaces": [
         "SPAN",
         "SPAN"
@@ -117,52 +117,52 @@
     "width": 390,
     "height": 844,
     "colorScheme": "light",
-    "sourceHash": "40a10a8e0bb07b33d60ac8a1a2b4aa961d7d034d1ee7070e6231c683b5b5b4a2",
+    "sourceHash": "aa3806735c6055965c279211bdb43fbeea092588c12f427f66ed36a102bf9a4c",
     "measurements": {
       "card": {
         "x": 16,
-        "y": 185.203125,
+        "y": 199.203125,
         "width": 358,
-        "height": 473.578125,
+        "height": 445.578125,
         "right": 374,
-        "bottom": 658.78125
+        "bottom": 644.78125
       },
       "support": {
         "x": 40,
-        "y": 498.78125,
+        "y": 484.78125,
         "width": 310,
         "height": 56,
         "right": 350,
-        "bottom": 554.78125
+        "bottom": 540.78125
       },
       "feedback": {
         "x": 40,
-        "y": 590.78125,
+        "y": 576.78125,
         "width": 310,
         "height": 44,
         "right": 350,
-        "bottom": 634.78125
+        "bottom": 620.78125
       },
       "img": {
         "x": 93.390625,
-        "y": 514.78125,
+        "y": 500.78125,
         "width": 24,
         "height": 24,
         "right": 117.390625,
-        "bottom": 538.78125
+        "bottom": 524.78125
       },
       "lineHeight": 24,
       "gap": "4px",
       "modal": true,
       "overflow": false,
-      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "amount": "$448 of $950 raised",
       "body": "rgb(245, 245, 245)",
       "background": "rgb(255, 255, 255)",
       "ink": "rgb(0, 0, 0)",
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$459 raised · Goal: $— (pending confirmation)Support my camera fund\nOr\nLeave Feedback\n",
+      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$448 of $950 raisedSupport my camera fund\nOr\nLeave Feedback\n",
       "blackSurfaces": [
         "SPAN",
         "SPAN"
@@ -174,52 +174,52 @@
     "width": 390,
     "height": 844,
     "colorScheme": "dark",
-    "sourceHash": "40a10a8e0bb07b33d60ac8a1a2b4aa961d7d034d1ee7070e6231c683b5b5b4a2",
+    "sourceHash": "aa3806735c6055965c279211bdb43fbeea092588c12f427f66ed36a102bf9a4c",
     "measurements": {
       "card": {
         "x": 16,
-        "y": 185.203125,
+        "y": 199.203125,
         "width": 358,
-        "height": 473.578125,
+        "height": 445.578125,
         "right": 374,
-        "bottom": 658.78125
+        "bottom": 644.78125
       },
       "support": {
         "x": 40,
-        "y": 498.78125,
+        "y": 484.78125,
         "width": 310,
         "height": 56,
         "right": 350,
-        "bottom": 554.78125
+        "bottom": 540.78125
       },
       "feedback": {
         "x": 40,
-        "y": 590.78125,
+        "y": 576.78125,
         "width": 310,
         "height": 44,
         "right": 350,
-        "bottom": 634.78125
+        "bottom": 620.78125
       },
       "img": {
         "x": 93.390625,
-        "y": 514.78125,
+        "y": 500.78125,
         "width": 24,
         "height": 24,
         "right": 117.390625,
-        "bottom": 538.78125
+        "bottom": 524.78125
       },
       "lineHeight": 24,
       "gap": "4px",
       "modal": true,
       "overflow": false,
-      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "amount": "$448 of $950 raised",
       "body": "rgb(18, 18, 18)",
       "background": "rgb(255, 255, 255)",
       "ink": "rgb(0, 0, 0)",
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$459 raised · Goal: $— (pending confirmation)Support my camera fund\nOr\nLeave Feedback\n",
+      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$448 of $950 raisedSupport my camera fund\nOr\nLeave Feedback\n",
       "blackSurfaces": [
         "SPAN",
         "SPAN"
@@ -231,52 +231,52 @@
     "width": 360,
     "height": 800,
     "colorScheme": "light",
-    "sourceHash": "40a10a8e0bb07b33d60ac8a1a2b4aa961d7d034d1ee7070e6231c683b5b5b4a2",
+    "sourceHash": "aa3806735c6055965c279211bdb43fbeea092588c12f427f66ed36a102bf9a4c",
     "measurements": {
       "card": {
         "x": 16,
-        "y": 152.8125,
+        "y": 166.8125,
         "width": 328,
-        "height": 494.375,
+        "height": 466.375,
         "right": 344,
-        "bottom": 647.1875
+        "bottom": 633.1875
       },
       "support": {
         "x": 40,
-        "y": 487.1875,
+        "y": 473.1875,
         "width": 280,
         "height": 56,
         "right": 320,
-        "bottom": 543.1875
+        "bottom": 529.1875
       },
       "feedback": {
         "x": 40,
-        "y": 579.1875,
+        "y": 565.1875,
         "width": 280,
         "height": 44,
         "right": 320,
-        "bottom": 623.1875
+        "bottom": 609.1875
       },
       "img": {
         "x": 78.390625,
-        "y": 503.1875,
+        "y": 489.1875,
         "width": 24,
         "height": 24,
         "right": 102.390625,
-        "bottom": 527.1875
+        "bottom": 513.1875
       },
       "lineHeight": 24,
       "gap": "4px",
       "modal": true,
       "overflow": false,
-      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "amount": "$448 of $950 raised",
       "body": "rgb(245, 245, 245)",
       "background": "rgb(255, 255, 255)",
       "ink": "rgb(0, 0, 0)",
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$459 raised · Goal: $— (pending confirmation)Support my camera fund\nOr\nLeave Feedback\n",
+      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$448 of $950 raisedSupport my camera fund\nOr\nLeave Feedback\n",
       "blackSurfaces": [
         "SPAN",
         "SPAN"
@@ -288,52 +288,52 @@
     "width": 360,
     "height": 800,
     "colorScheme": "dark",
-    "sourceHash": "40a10a8e0bb07b33d60ac8a1a2b4aa961d7d034d1ee7070e6231c683b5b5b4a2",
+    "sourceHash": "aa3806735c6055965c279211bdb43fbeea092588c12f427f66ed36a102bf9a4c",
     "measurements": {
       "card": {
         "x": 16,
-        "y": 152.8125,
+        "y": 166.8125,
         "width": 328,
-        "height": 494.375,
+        "height": 466.375,
         "right": 344,
-        "bottom": 647.1875
+        "bottom": 633.1875
       },
       "support": {
         "x": 40,
-        "y": 487.1875,
+        "y": 473.1875,
         "width": 280,
         "height": 56,
         "right": 320,
-        "bottom": 543.1875
+        "bottom": 529.1875
       },
       "feedback": {
         "x": 40,
-        "y": 579.1875,
+        "y": 565.1875,
         "width": 280,
         "height": 44,
         "right": 320,
-        "bottom": 623.1875
+        "bottom": 609.1875
       },
       "img": {
         "x": 78.390625,
-        "y": 503.1875,
+        "y": 489.1875,
         "width": 24,
         "height": 24,
         "right": 102.390625,
-        "bottom": 527.1875
+        "bottom": 513.1875
       },
       "lineHeight": 24,
       "gap": "4px",
       "modal": true,
       "overflow": false,
-      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "amount": "$448 of $950 raised",
       "body": "rgb(18, 18, 18)",
       "background": "rgb(255, 255, 255)",
       "ink": "rgb(0, 0, 0)",
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$459 raised · Goal: $— (pending confirmation)Support my camera fund\nOr\nLeave Feedback\n",
+      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$448 of $950 raisedSupport my camera fund\nOr\nLeave Feedback\n",
       "blackSurfaces": [
         "SPAN",
         "SPAN"
@@ -345,7 +345,7 @@
     "width": 1280,
     "height": 900,
     "colorScheme": "light",
-    "sourceHash": "40a10a8e0bb07b33d60ac8a1a2b4aa961d7d034d1ee7070e6231c683b5b5b4a2",
+    "sourceHash": "aa3806735c6055965c279211bdb43fbeea092588c12f427f66ed36a102bf9a4c",
     "measurements": {
       "card": {
         "x": 656,
@@ -383,14 +383,14 @@
       "gap": "4px",
       "modal": false,
       "overflow": false,
-      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "amount": "$448 of $950 raised",
       "body": "rgb(250, 250, 244)",
       "background": "rgb(255, 255, 255)",
       "ink": "rgb(0, 0, 0)",
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$459 raised · Goal: $— (pending confirmation)Support my camera fund\nOr\nLeave Feedback\n",
+      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$448 of $950 raisedSupport my camera fund\nOr\nLeave Feedback\n",
       "blackSurfaces": [
         "SPAN",
         "SPAN"
@@ -402,7 +402,7 @@
     "width": 1280,
     "height": 900,
     "colorScheme": "dark",
-    "sourceHash": "40a10a8e0bb07b33d60ac8a1a2b4aa961d7d034d1ee7070e6231c683b5b5b4a2",
+    "sourceHash": "aa3806735c6055965c279211bdb43fbeea092588c12f427f66ed36a102bf9a4c",
     "measurements": {
       "card": {
         "x": 656,
@@ -440,14 +440,14 @@
       "gap": "4px",
       "modal": false,
       "overflow": false,
-      "amount": "$459 raised · Goal: $— (pending confirmation)",
+      "amount": "$448 of $950 raised",
       "body": "rgb(18, 18, 18)",
       "background": "rgb(255, 255, 255)",
       "ink": "rgb(0, 0, 0)",
       "button": "rgb(36, 36, 36)",
       "secondary": "rgb(255, 255, 255)",
       "border": "rgb(204, 204, 204)",
-      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$459 raised · Goal: $— (pending confirmation)Support my camera fund\nOr\nLeave Feedback\n",
+      "copy": "\n\nWhat goes around comes around!\nHelp me get the DJI pocket 4P tired of shooting interstellar on a phone that overheats :_)\n$448 of $950 raisedSupport my camera fund\nOr\nLeave Feedback\n",
       "blackSurfaces": [
         "SPAN",
         "SPAN"

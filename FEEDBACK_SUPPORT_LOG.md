@@ -139,3 +139,14 @@ LICENSE.PROPOSED.md is a draft only; the existing license and repository
 visibility have not yet been changed. Owner confirmation is needed on the
 hosted-app-use exception. This draft expressly preserves previous license grants,
 GitHub platform rights, and third-party licenses.
+
+## 2026-09-14 — Finalize public update
+
+Applied the latest reference's $448 raised and $950 goal consistently to both
+funding displays and the actual progress values. Replaced the proposed license
+with proprietary terms allowing normal hosted-app use while restricting source
+reuse, modification, redistribution and sale, subject to prior grants and
+third-party/platform rights. Removed the superseded draft and updated README.
+All eight completion viewport/theme checks and feedback-completion checks
+passed again, with refreshed screenshot evidence. `git diff --check` passed.
+Cube mechanics, camera/layer math, solver and saved-progress code are unchanged.

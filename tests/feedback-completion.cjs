@@ -19,7 +19,7 @@ a=setup();a.setDone(true);a.setDone(false);a.tick();assert.equal(a.nodes['comple
 a=setup();a.setDone(true);a.hide();a.tick();assert.equal(a.nodes['completion-dialog'].opens,undefined);
 a=setup();a.nodes['feedback-message'].value='Hello & 雪';a.nodes['feedback-form'].listeners.submit({preventDefault(){}});
 const u=new URL(a.window.location.href);assert.equal(u.pathname,'manav.uix@gmail.com');assert.equal(u.searchParams.get('body'),'Hello & 雪');
-assert.equal(a.nodes['completion-fund-progress'].value,undefined);assert.equal(a.nodes['camera-fund-progress'].max,undefined);assert.equal(a.nodes['completion-fund-amount'].textContent,'$459 raised · Goal: $— (pending confirmation)');
+assert.equal(a.nodes['completion-fund-progress'].value,448);assert.equal(a.nodes['camera-fund-progress'].max,950);assert.equal(a.nodes['completion-fund-amount'].textContent,'$448 of $950 raised');
 a=setup(false,String(Date.now()-6*86400000));a.setDone(true);a.tick();assert.equal(a.nodes['completion-dialog'].opens,undefined);
 a=setup(false,String(Date.now()-8*86400000));a.setDone(true);a.tick();assert.equal(a.nodes['completion-dialog'].opens,1);
 console.log('PASS: 3-second delay, one prompt, restored-game suppression, navigation/hidden cancellation, feedback transition, mailto encoding and shared goal.');
