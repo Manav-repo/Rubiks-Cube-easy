@@ -4,7 +4,10 @@ const out='tests/completion-evidence';fs.mkdirSync(out,{recursive:true});
 const files=['dist/index.html','dist/feedback.css','dist/mobile-design.css','dist/js/feedback.js','dist/js/support.js'];
 const fingerprint=()=>crypto.createHash('sha256').update(files.map(f=>fs.readFileSync(f)).join('')).digest('hex');
 const sourceHash=fingerprint();
-for(const f of ['dist/js/app.js','dist/js/cube-view.js','dist/js/layout.js','dist/js/lessons.js','dist/js/stage-planner.js','dist/js/solver-worker.js','dist/vendor/cube.js','dist/js/theme.js'])assert.equal(fs.readFileSync(f,'utf8'),cp.execFileSync('git',['show',`a076727:${f}`],{encoding:'utf8'}),f+' unchanged');
+// The desktop copy release changes only these four presentation assignments.
+const withoutCopy=s=>s.split('\n').filter(l=>!['painter-title','painter-intro','stage-label','stage-subtitle'].some(id=>l.includes("$('"+id+"').textContent="))).join('\n');
+assert.equal(withoutCopy(fs.readFileSync('dist/js/app.js','utf8')),withoutCopy(cp.execFileSync('git',['show','a076727:dist/js/app.js'],{encoding:'utf8'})),'non-copy application code unchanged');
+for(const f of ['dist/js/cube-view.js','dist/js/layout.js','dist/js/lessons.js','dist/js/stage-planner.js','dist/js/solver-worker.js','dist/vendor/cube.js','dist/js/theme.js'])assert.equal(fs.readFileSync(f,'utf8'),cp.execFileSync('git',['show',`a076727:${f}`],{encoding:'utf8'}),f+' unchanged');
 assert.deepEqual(fs.readFileSync('dist/assets/cube-easy/coffee.svg'),fs.readFileSync('Assests/Buy me coffee.svg'));
 assert.deepEqual(fs.readFileSync('dist/assets/cube-easy/close.svg'),fs.readFileSync('Assests/x close.svg'));
 assert.deepEqual(fs.readFileSync('dist/assets/cube-easy/mail.svg'),fs.readFileSync('Assests/Mail.svg'));

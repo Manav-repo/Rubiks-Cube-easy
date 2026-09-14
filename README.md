@@ -2,7 +2,7 @@
 
 Cube Brainiac is a free browser app that helps you learn to solve a Rubik’s Cube or find moves for the cube in your hands.
 
-[Open the live demo](https://cube-brainiac.manav-uix.chatgpt.site/)
+[Open the live demo](https://manav-repo.github.io/Rubiks-Cube-easy/)
 
 You can also run the complete app locally using the steps below.
 
