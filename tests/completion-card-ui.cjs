@@ -36,8 +36,14 @@ assert.deepEqual(fs.readFileSync('dist/assets/cube-easy/pocket-4p-dji.png'),fs.r
   await page.screenshot({path:`${out}/${width}-${colorScheme}.png`});
   // A feedback form is optional, opened only by the explicit action.
   assert.equal(await page.locator('#feedback-dialog').isVisible(),false);
-  await page.locator('#completion-feedback').click();assert.equal(await page.locator('#feedback-dialog').isVisible(),true);
-  await page.locator('#feedback-close').click();assert.equal(await page.locator('#completion-dialog').isVisible(),true);
+  const before=await page.locator('#completion-dialog').boundingBox();
+  await page.locator('#completion-feedback').click();assert.equal(await page.locator('#feedback-dialog').isVisible(),false);
+  assert.equal(await page.locator('dialog[open]').count(),1);
+  assert.equal(await page.locator('#completion-dialog #feedback-form').isVisible(),true);
+  assert.equal(await page.locator('#completion-support').isVisible(),false);
+  assert.deepEqual(await page.locator('#completion-dialog').boundingBox(),before);
+  await page.locator('#feedback-message').fill('Same-card feedback');
+  await page.screenshot({path:`${out}/${width}-${colorScheme}-feedback.png`});
   await page.locator('#completion-close').click();assert.equal(await page.locator('#feedback-dialog').isVisible(),false);
   await page.evaluate(()=>render());assert.equal(await page.locator('#completion-dialog').isVisible(),false);
   assert.deepEqual(errors,[]);result.push({width,height,colorScheme,sourceHash,measurements:m,passed:true});await context.close();

@@ -31,6 +31,23 @@
  });
  // Observe completion without modifying any game model, math or handler.
  const completion=document.getElementById('completion-dialog');
+ const formSlot=document.createComment('feedback form position');
+ form.before(formSlot);
+ const feedbackView=document.createElement('div');
+ feedbackView.hidden=true;
+ completion.append(feedbackView);
+ const feedbackHeading=document.createElement('h2');
+ feedbackHeading.id='completion-feedback-title';
+ feedbackHeading.textContent='Share your feedback';
+ feedbackView.append(feedbackHeading);
+ const completionContent=[...completion.children].filter(el=>el.id!=='completion-close'&&el!==feedbackView);
+ function restoreCompletion(){
+  formSlot.after(form);
+  feedbackView.hidden=true;
+  completionContent.forEach(el=>el.hidden=false);
+  completion.style.height='';
+  completion.setAttribute('aria-labelledby','completion-title');
+ }
  const key='cube-easy-support-prompt-last-shown';
  const week=7*24*60*60*1000;
  let shown=false, timer=null, returnFocus=null;
@@ -60,9 +77,14 @@
  document.addEventListener('visibilitychange',observeCompletion);
  document.getElementById('completion-close').addEventListener('click',()=>completion.close());
  completion.addEventListener('cancel',event=>event.preventDefault());
- completion.addEventListener('close',()=>{if(returnFocus?.isConnected&&!returnFocus.disabled)returnFocus.focus();});
+ completion.addEventListener('close',()=>{if(completion.open)return;restoreCompletion();if(returnFocus?.isConnected&&!returnFocus.disabled)returnFocus.focus();});
  document.getElementById('completion-feedback').addEventListener('click',()=>{
-  present(dialog);
+  completion.style.height=completion.getBoundingClientRect().height+'px';
+  completionContent.forEach(el=>el.hidden=true);
+  feedbackView.append(form);
+  feedbackView.hidden=false;
+  completion.setAttribute('aria-labelledby','completion-feedback-title');
+  message.focus();
  });
  // A viewport change must also remove/add native modality, not just move the box.
  mobile.addEventListener('change',()=>{

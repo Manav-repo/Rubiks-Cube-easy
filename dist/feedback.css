@@ -68,3 +68,9 @@
  .completion-camera{border-radius:16px}
  #completion-dialog #completion-support,#completion-dialog #completion-feedback{font-size:16px}
 }
+
+/* Feedback replaces the completion content inside the same light card. */
+#completion-dialog [hidden]{display:none!important}
+#completion-dialog #feedback-form label{display:block;margin-bottom:var(--space-3)}
+#completion-dialog #feedback-form p{font-size:14px;margin:var(--space-3) 0}
+#completion-dialog #feedback-form button{min-height:44px;background:var(--completion-primary);color:var(--completion-on-primary)}
