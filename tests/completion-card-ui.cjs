@@ -1,7 +1,7 @@
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),cp=require('node:child_process'),crypto=require('node:crypto');
 const out='tests/completion-evidence';fs.mkdirSync(out,{recursive:true});
-const files=['dist/index.html','dist/feedback.css','dist/mobile-design.css','dist/js/feedback.js','dist/js/support.js'];
+const files=['dist/index.html','dist/desktop-design.css','dist/js/mobile-presentation.js','dist/feedback.css','dist/mobile-design.css','dist/js/feedback.js','dist/js/support.js'];
 const fingerprint=()=>crypto.createHash('sha256').update(files.map(f=>fs.readFileSync(f)).join('')).digest('hex');
 const sourceHash=fingerprint();
 // The desktop copy release changes only these four presentation assignments.
@@ -31,7 +31,7 @@ assert.deepEqual(fs.readFileSync('dist/assets/cube-easy/pocket-4p-dji.png'),fs.r
   const mail=await page.locator('.mail-icon').evaluate(e=>({height:e.getBoundingClientRect().height,line:parseFloat(getComputedStyle(e.parentElement).lineHeight),mask:getComputedStyle(e).maskImage,gap:getComputedStyle(e.parentElement).gap}));
   assert.equal(mail.height,mail.line);assert.equal(mail.gap,'4px');assert.ok(mail.mask.includes('mail.svg'));
   if(width<681){assert.ok(Math.abs(m.card.x+m.card.width/2-width/2)<1);assert.ok(Math.abs(m.card.y+m.card.height/2-height/2)<1);}else assert.ok(m.card.x>width/2);
-  if(colorScheme==='dark')assert.equal(m.body,'rgb(18, 18, 18)');
+  if(colorScheme==='dark')assert.equal(m.body,width<681?'rgb(18, 18, 18)':'rgb(26, 26, 26)');
   assert.equal(m.background,'rgb(255, 255, 255)');assert.equal(m.ink,'rgb(0, 0, 0)');assert.equal(m.button,'rgb(36, 36, 36)');assert.equal(m.secondary,'rgb(255, 255, 255)');assert.equal(m.border,'rgb(204, 204, 204)');
   await page.screenshot({path:`${out}/${width}-${colorScheme}.png`});
   // A feedback form is optional, opened only by the explicit action.

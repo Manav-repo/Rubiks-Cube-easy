@@ -3,7 +3,7 @@
     "width": 375,
     "height": 667,
     "colorScheme": "light",
-    "sourceHash": "32ddb1a8eb7f08ee83e8c675f61b9d43891253db53c2e0f2c78b619c3e72113f",
+    "sourceHash": "112bfc8bb8bb5a727f490578e6320be56faf1e7bf396672043a527bfaa201b5e",
     "measurements": {
       "card": {
         "x": 16,
@@ -60,7 +60,7 @@
     "width": 375,
     "height": 667,
     "colorScheme": "dark",
-    "sourceHash": "32ddb1a8eb7f08ee83e8c675f61b9d43891253db53c2e0f2c78b619c3e72113f",
+    "sourceHash": "112bfc8bb8bb5a727f490578e6320be56faf1e7bf396672043a527bfaa201b5e",
     "measurements": {
       "card": {
         "x": 16,
@@ -117,7 +117,7 @@
     "width": 390,
     "height": 844,
     "colorScheme": "light",
-    "sourceHash": "32ddb1a8eb7f08ee83e8c675f61b9d43891253db53c2e0f2c78b619c3e72113f",
+    "sourceHash": "112bfc8bb8bb5a727f490578e6320be56faf1e7bf396672043a527bfaa201b5e",
     "measurements": {
       "card": {
         "x": 16,
@@ -174,7 +174,7 @@
     "width": 390,
     "height": 844,
     "colorScheme": "dark",
-    "sourceHash": "32ddb1a8eb7f08ee83e8c675f61b9d43891253db53c2e0f2c78b619c3e72113f",
+    "sourceHash": "112bfc8bb8bb5a727f490578e6320be56faf1e7bf396672043a527bfaa201b5e",
     "measurements": {
       "card": {
         "x": 16,
@@ -231,7 +231,7 @@
     "width": 360,
     "height": 800,
     "colorScheme": "light",
-    "sourceHash": "32ddb1a8eb7f08ee83e8c675f61b9d43891253db53c2e0f2c78b619c3e72113f",
+    "sourceHash": "112bfc8bb8bb5a727f490578e6320be56faf1e7bf396672043a527bfaa201b5e",
     "measurements": {
       "card": {
         "x": 16,
@@ -288,7 +288,7 @@
     "width": 360,
     "height": 800,
     "colorScheme": "dark",
-    "sourceHash": "32ddb1a8eb7f08ee83e8c675f61b9d43891253db53c2e0f2c78b619c3e72113f",
+    "sourceHash": "112bfc8bb8bb5a727f490578e6320be56faf1e7bf396672043a527bfaa201b5e",
     "measurements": {
       "card": {
         "x": 16,
@@ -345,7 +345,7 @@
     "width": 1280,
     "height": 900,
     "colorScheme": "light",
-    "sourceHash": "32ddb1a8eb7f08ee83e8c675f61b9d43891253db53c2e0f2c78b619c3e72113f",
+    "sourceHash": "112bfc8bb8bb5a727f490578e6320be56faf1e7bf396672043a527bfaa201b5e",
     "measurements": {
       "card": {
         "x": 656,
@@ -384,7 +384,7 @@
       "modal": false,
       "overflow": false,
       "amount": "$448 of $950 raised",
-      "body": "rgb(250, 250, 244)",
+      "body": "rgb(245, 245, 245)",
       "background": "rgb(255, 255, 255)",
       "ink": "rgb(0, 0, 0)",
       "button": "rgb(36, 36, 36)",
@@ -402,7 +402,7 @@
     "width": 1280,
     "height": 900,
     "colorScheme": "dark",
-    "sourceHash": "32ddb1a8eb7f08ee83e8c675f61b9d43891253db53c2e0f2c78b619c3e72113f",
+    "sourceHash": "112bfc8bb8bb5a727f490578e6320be56faf1e7bf396672043a527bfaa201b5e",
     "measurements": {
       "card": {
         "x": 656,
@@ -441,7 +441,7 @@
       "modal": false,
       "overflow": false,
       "amount": "$448 of $950 raised",
-      "body": "rgb(18, 18, 18)",
+      "body": "rgb(26, 26, 26)",
       "background": "rgb(255, 255, 255)",
       "ink": "rgb(0, 0, 0)",
       "button": "rgb(36, 36, 36)",
