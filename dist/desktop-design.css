@@ -1,0 +1,83 @@
+/* Wider adaptation of the Cube Easy reference. Existing interactive nodes stay intact. */
+@media(min-width:681px){
+ :root{--paper:#f5f5f5;--ink:#242424;--muted:#606060;--line:#ccc;--surface:#f5f5f5;--panel:#eee;--soft:#e8e8e8;--button:#f5f5f5;--hint:#eee;--selected:#e8e8e8;--primary:#242424;--on-primary:#fff;--green:#242424;--dot:transparent}
+ :root[data-theme=dark]{--paper:#1a1a1a;--ink:#fff;--muted:#b5b5b5;--line:#606060;--surface:#1a1a1a;--panel:#121212;--soft:#2b2b2b;--button:#1a1a1a;--hint:#2b2b2b;--selected:#2b2b2b;--primary:#f2f2f2;--on-primary:#121212;--green:#f2f2f2}
+ body{font-family:Arial,Helvetica,sans-serif;font-size:16px;background:var(--paper);color:var(--ink)}
+ h1,h2,h3,.painter h2,.coach h3,.journey h2{font-family:Arial,Helvetica,sans-serif;letter-spacing:normal}
+ header,body.playback header{position:relative;height:81px;min-height:81px;margin:0 auto;padding:16px 24px;max-width:1776px;border-bottom:1px solid var(--line);background:var(--paper)}
+ .brand{display:flex;align-items:center;width:167px;min-height:44px}
+ .desktop-brand{display:none}
+ .mobile-wordmark{width:167px;height:32px;object-fit:contain}
+ .wordmark-light{display:block}
+ .wordmark-dark{display:none}
+ :root[data-theme=dark] .wordmark-light{display:none}
+ :root[data-theme=dark] .wordmark-dark{display:block}
+ .save-status{display:none}
+ .header-right{display:flex;gap:4px;align-items:center}
+ header #support-links{display:flex;gap:4px;margin:0}
+ header #support-links a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0}
+ header #support-links a svg,header #support-links a span,header #support-links a img,header #support-links .coffee-button-icon{display:none}
+ header #support-links a::after{content:none}
+ header #support-links a::before{content:'';width:32px;height:32px;border-radius:8px;background:center/contain no-repeat}
+ header #support-links a:first-child::before{background-image:url('assets/cube-easy/coffee.svg')}
+ header #support-links a:nth-child(2)::before{background-color:#121212;background-image:url('assets/cube-easy/x.svg');background-size:24px}
+ header #support-links a:nth-child(3)::before{background-image:url('assets/cube-easy/linkedin.png')}
+ #settings-toggle{width:44px;height:44px;padding:10px;border:0;border-left:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink)}
+ .settings{top:81px;background:var(--panel);color:var(--ink)}
+ body.playback{height:auto;overflow:auto}
+ body main,body.playback main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:48px auto 1fr;align-items:start;gap:24px;max-width:1776px;padding:40px 24px 24px;margin:0 auto;height:auto}
+ .intro,body.playback .intro{display:block;grid-column:2;grid-row:1;margin:0;padding:0;min-height:0}
+ .intro>div:first-child,footer,body.playback footer{display:none!important}
+ .intro .mode-switch,body.playback .intro .mode-switch{display:flex;gap:8px;justify-content:flex-start;border:0;padding:0;background:none;border-radius:0}
+ .mode-switch button,body.playback .intro .mode-switch button{display:flex;align-items:center;justify-content:center;gap:4px;min-height:48px;padding:12px 16px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--muted);box-shadow:none;font:inherit;white-space:nowrap}
+ .mode-switch button.active,body.playback .mode-switch button.active{color:var(--ink);border-bottom-color:var(--ink);background:transparent}
+ .app-layout,body.fix .app-layout,body.playback .app-layout{display:contents}
+ .workspace,body.fix .workspace,body.playback .workspace{grid-column:1;grid-row:1 / span 3;position:sticky;top:24px;display:flex;flex-direction:column;min-width:0;width:100%;padding:16px;border:0;border-radius:10px;background:var(--panel);height:auto;min-height:600px;max-height:none;margin:0;overflow:visible}
+ .workspace-heading,.workspace #stage-title,.workspace #stage-subtitle,.workspace .view-label,.workspace .cube-shadow{display:none}
+ .workspace .objective,body.playback .workspace .objective{position:static;display:flex;justify-content:space-between;align-items:start;gap:16px;margin:0;padding:0;border:0;background:none;width:100%;font-size:14px}
+ .objective .eyebrow,#objective-next,#objective-action{display:none!important}
+ .objective strong{font-size:14px;font-weight:400;line-height:20px}
+ .objective-progress{min-width:0;text-align:right}
+ .objective-progress>span{margin:0;font-size:14px;line-height:20px}
+ .workspace .cube-space,body.playback .workspace .cube-space{width:100%;height:clamp(360px,55vh,640px);min-height:360px;margin:0;background:none;flex:1}
+ .workspace .view-tools,body.playback .workspace .view-tools{display:flex;justify-content:space-between;gap:16px;padding:0;margin:0;min-height:44px;font-size:14px}
+ .view-tools button{min-height:44px;padding:0;border:0;background:transparent;color:var(--ink);font-size:14px}
+ .painter,body.fix .painter,body.playback .painter{grid-column:2;grid-row:2 / span 2;display:block;position:static;min-width:0;padding:0;border:0;border-radius:0;background:none;height:auto;max-height:none;overflow:visible}
+ .painter[hidden]{display:none!important}
+ .painter>.eyebrow{display:none}
+ .painter h2{margin:0 0 16px;font-size:28px;line-height:1.2}
+ .painter p{color:var(--muted);line-height:1.5}
+ .painter #painter-intro{margin:0 0 16px}
+ .palette{gap:8px;margin:16px 0;flex-wrap:wrap}
+ .palette button{border-radius:4px;min-width:48px;min-height:48px}
+ .cube-net{--net-cell:clamp(16px,calc((100vw - 280px)/24),40px);background:var(--panel);padding:24px 16px;border-radius:10px;margin:16px 0;width:100%;max-width:100%;justify-content:center;gap:16px}
+ .painter-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:16px;margin:16px 0}
+ .painter-actions button{min-height:44px;padding:12px 16px;border:1px solid var(--line);border-radius:8px;font:inherit;background:transparent;color:var(--ink)}
+ .painter-actions .primary{background:var(--primary);color:var(--on-primary);border-color:var(--primary)}
+ #solution-controls,body.playback #solution-controls{display:block}
+ #solution-controls[hidden]{display:none!important}
+ #solution-caption,#playback-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ body.playback .playback-actions{display:flex;justify-content:flex-start;gap:16px;margin:24px 0;padding:0;border:0;height:auto}
+ .playback-details,body.playback .playback-details{display:block;margin:0;padding:16px 0;border:0;border-top:1px solid var(--line);background:none;max-height:none;overflow:visible}
+ .playback-options{margin:0 0 16px;padding:0 0 16px;border-bottom:1px solid var(--line)}
+ .playback-options label{display:flex;align-items:center;gap:16px}
+ #playback-speed{min-height:44px;border:0;border-bottom:1px solid var(--ink);border-radius:0;background:transparent;color:var(--ink);font:inherit}
+ #solution-progress{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+ .solution-token{min-width:44px;min-height:44px;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--muted);font:inherit}
+ .solution-token.current{background:var(--primary);color:var(--on-primary);border-color:var(--primary);box-shadow:none}
+ .coach{grid-column:2;grid-row:2;min-width:0;border:0;border-radius:10px;background:var(--panel)}
+ .coach-top,.coach-bottom,.journey-note{display:none}
+ .coach-task,.coach-response{padding:24px;background:transparent}
+ .coach-response:empty{display:none}
+ .coach h3{font-size:24px}
+ .coach p,.coach .tiny{color:var(--ink)}
+ .goal-box,.choice{background:var(--soft);color:var(--ink);border-color:var(--line)}
+ .journey{grid-column:2;grid-row:3;padding:16px 0;min-width:0;border-top:1px solid var(--line)}
+ .journey h2{font-size:20px}
+ #stages{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ .stage-button{height:100%;padding:12px;border:1px solid var(--line);border-radius:8px;color:var(--ink)}
+ .stage-button.selected{background:var(--soft)}
+ body.fix .journey,body.fix .coach{display:none}
+ body.fix .workspace{min-height:calc(100vh - 145px)}
+ body.fix .workspace .turn-heading,body.fix .workspace .face-controls,body.fix .workspace .cube-actions,body.fix .workspace .caption{display:none}
+}

@@ -19,13 +19,13 @@ function render(){
  $('view-label').textContent=`Yellow on top · Green in front · ${colorNames.R} on right`;$('layout-status').textContent=state.layout?`${colorNames.R} on the right`:'Screen cube: red on right. Match a real cube before solving.';
  syncThemeButton();
  document.body.classList.toggle('fix',state.mode==='fix');document.body.classList.toggle('playback',state.mode==='fix'&&state.solution.length>0&&state.playback);document.body.classList.toggle('paint-ready',state.mode==='fix'&&state.solution.length===0&&!state.paint.includes('?'));document.body.classList.toggle('home',state.mode==='learn'&&state.stage===0&&state.phase==='predict'&&!state.recall&&state.solution.length===0);document.body.classList.toggle('symbols',state.symbols||state.accessible);document.body.classList.toggle('accessible',state.accessible);
- $('painter-title').textContent=state.mode==='fix'&&state.solution.length?'Follow the move.':'Paint your puzzle.';
- $('painter-intro').textContent=state.mode==='fix'&&state.solution.length?'Watch, then copy. Hidden faces come into view. Move names stay fixed.':'Keep yellow on top and green in front. Pick a color, then tap a square. Centers stay put.';
+ $('painter-title').textContent=state.mode==='fix'&&state.solution.length?'Follow the move.':"Paint your cube’s current colors.";
+ $('painter-intro').textContent=state.mode==='fix'&&state.solution.length?'Watch the arrow, then copy the turn on your cube.':'Keep yellow on top and green in front. Pick a color, then tap a square. Centers stay put.';
  $('symbols').checked=state.symbols;$('accessible').checked=state.accessible;
  ['learn','fix'].forEach(m=>{$(m+'-mode').classList.toggle('active',state.mode===m);$(m+'-mode').setAttribute('aria-pressed',state.mode===m);});
- $('painter').hidden=state.mode!=='fix';$('stage-label').textContent=state.mode==='fix'?'FIX MY CUBE · FOLLOW ALONG':`STAGE 0${state.stage+1} · ${state.recall?'FROM MEMORY':lessons[state.stage].tag}`;
+ $('painter').hidden=state.mode!=='fix';$('stage-label').textContent=state.mode==='fix'?(state.solution.length?'FIX MY CUBE · FOLLOW ALONG':'FIX MY CUBE · MATCH COLORS'):`STAGE 0${state.stage+1} · ${state.recall?'FROM MEMORY':lessons[state.stage].tag}`;
  $('stage-title').textContent=state.mode==='fix'?'Let’s untangle it.':lessons[state.stage].title;
- $('stage-subtitle').textContent=state.mode==='fix'?'Match each turn on your real cube.':lessons[state.stage].subtitle;
+ $('stage-subtitle').textContent=state.mode==='fix'?(state.solution.length?'Match each turn on your real cube.':'Copy all six faces to find your solution.'):lessons[state.stage].subtitle;
  $('move-count').textContent=state.mode==='learn'?state.count:state.fixCount;
  $('badge-count').textContent=`${state.completed.length} / 7`;$('progress').style.width=`${state.completed.length/7*100}%`;
  $('stages').innerHTML=lessons.map((l,i)=>`<li><button class="stage-button ${i===state.stage?'selected':''}" data-stage="${i}" ${i>state.unlocked?'disabled':''} ${i===state.stage?'aria-current="step"':''}><span class="stage-number">${state.completed.includes(i)?'✓':String(i+1).padStart(2,'0')}</span><span class="stage-text">${l.title}</span>${i>state.unlocked?'<span class="stage-lock" aria-label="Locked">⊙</span>':''}</button></li>`).join('');

@@ -1,0 +1,70 @@
+/* Completion offers support and feedback together. No automatic feedback chain. */
+:root{--space-xs:4px;--space-3:16px;--space-4:24px;--completion-surface:#fff;--completion-ink:#161616;--completion-secondary:#fff;--completion-line:#ccc;--completion-primary:#242424;--completion-on-primary:#fff;--completion-track:#fff;--completion-progress:#90ce86}
+:root[data-theme=dark]{--paper:#121212;--ink:#fff;--muted:#606060;--line:#606060;--surface:#2b2b2b;--panel:#2b2b2b;--soft:#1a1a1a;--button:#1a1a1a;--hint:#1a1a1a;--selected:#1a1a1a;--dark:#f2f2f2;--primary:#f2f2f2;--on-primary:#121212;--green:#f2f2f2;--completion-surface:#2b2b2b;--completion-ink:#fff;--completion-secondary:#1a1a1a;--completion-line:#606060;--completion-primary:#f2f2f2;--completion-on-primary:#121212;--completion-track:#1a1a1a;--completion-progress:#f2f2f2}
+#feedback-open{min-height:44px}
+#completion-dialog,#feedback-dialog{position:fixed;box-sizing:border-box;inset:var(--space-4) var(--space-4) auto auto;margin:0;width:400px;max-width:calc(100vw - 48px);max-height:calc(100dvh - 48px);overflow:auto;padding:var(--space-4);border:0;border-radius:20px;background:var(--completion-surface);color:var(--completion-ink);font-family:Arial,Helvetica,sans-serif;box-shadow:0 16px 64px #12121233;z-index:30}
+#completion-dialog::backdrop,#feedback-dialog::backdrop{background:#12121299}
+#completion-dialog h2,#feedback-dialog h2{margin:0 44px var(--space-4) 0;font-family:inherit;font-size:28px;font-weight:700;line-height:1.2}
+#completion-dialog p{font-size:16px;line-height:1.45;margin:0 0 var(--space-4)}
+#completion-dialog section{margin-top:var(--space-4)}
+#completion-close,#feedback-dialog #feedback-close{display:flex;align-items:center;justify-content:center;position:absolute;right:var(--space-3);top:var(--space-3);width:44px;height:44px;padding:0;border:0;background:transparent;color:var(--completion-ink)}
+#completion-fund-amount{display:block;font-size:18px;line-height:1.4}
+#completion-fund-progress,#camera-fund progress{display:block;width:100%;height:8px;appearance:none;border:1px solid var(--completion-line);border-radius:3px;overflow:hidden;margin:var(--space-3) 0 var(--space-4);background:var(--completion-track);color:var(--completion-progress)}
+#completion-fund-progress::-webkit-progress-bar,#camera-fund progress::-webkit-progress-bar{background:var(--completion-track)}
+#completion-fund-progress::-webkit-progress-value,#camera-fund progress::-webkit-progress-value{background:var(--completion-progress)}
+#completion-fund-progress::-moz-progress-bar,#camera-fund progress::-moz-progress-bar{background:var(--completion-progress)}
+/* No invented percentage or loading animation while the target is unknown. */
+#completion-fund-progress:indeterminate,#camera-fund progress:indeterminate{background:var(--completion-track)}
+#completion-fund-progress:indeterminate::-moz-progress-bar,#camera-fund progress:indeterminate::-moz-progress-bar{background:transparent}
+#completion-support{display:flex;justify-content:center;align-items:center;gap:var(--space-xs);min-height:44px;padding:var(--space-3);background:var(--completion-primary);color:var(--completion-on-primary);border-radius:10px;text-decoration:none;font-size:16px;line-height:24px;text-align:center}
+#completion-support span{min-width:0}
+#completion-feedback{display:block;min-height:44px;width:100%;margin-top:var(--space-3);padding:8px var(--space-3);font:inherit;line-height:24px;background:var(--completion-secondary);color:var(--completion-ink);border:1px solid var(--completion-line);border-radius:10px}
+#completion-support .coffee-button-icon,.feedback-support-links .coffee-button-icon{display:block;width:1lh;height:1lh;flex:0 0 1lh;object-fit:contain}
+#support-links .coffee-button-icon{display:block;width:1lh;height:1lh;object-fit:contain}
+/* The mobile header already renders the exact same asset in its 32px chip. */
+@media(max-width:680px){header #support-links .coffee-button-icon{display:none}}
+#feedback-dialog label{display:block;margin-bottom:var(--space-3)}
+#feedback-message{box-sizing:border-box;display:block;width:100%;min-height:120px;padding:var(--space-3);font:inherit;font-size:16px;border:1px solid var(--completion-line);border-radius:8px;background:var(--completion-secondary);color:inherit;resize:vertical}
+#feedback-dialog p{font-size:14px;line-height:1.5}
+#feedback-dialog button{min-height:44px;border:1px solid var(--completion-line);background:var(--completion-secondary);color:var(--completion-ink)}
+#feedback-dialog button.primary{background:var(--completion-primary);color:var(--completion-on-primary)}
+#feedback-dialog .feedback-actions{display:flex;gap:var(--space-3)}
+#camera-fund{margin-top:var(--space-4);padding-top:var(--space-3);border-top:1px solid var(--completion-line);text-align:left;font-size:14px;line-height:1.5}
+#camera-fund p{margin:var(--space-xs) 0}
+#camera-fund .feedback-support-links{display:flex;flex-wrap:wrap;gap:var(--space-xs) var(--space-3)}
+#camera-fund a{display:inline-flex;align-items:center;gap:var(--space-xs);min-height:44px;color:inherit;text-decoration:underline;line-height:20px}
+#completion-dialog :focus-visible,#feedback-dialog :focus-visible{outline:3px solid #3561c6;outline-offset:3px}
+#completion-feedback:hover,#completion-close:hover,#feedback-dialog button:hover{background:var(--completion-secondary)}
+@media(max-width:680px){
+ #completion-dialog,#feedback-dialog{inset:0;margin:auto;width:calc(100% - max(16px, env(safe-area-inset-left)) - max(16px, env(safe-area-inset-right)));max-width:480px;max-height:calc(100dvh - max(16px, env(safe-area-inset-top)) - max(16px, env(safe-area-inset-bottom)));padding:var(--space-4)}
+}
+@media(max-width:680px) and (max-height:600px){
+ #completion-dialog{padding:var(--space-3)}
+ #completion-dialog h2,#completion-dialog p{margin-bottom:var(--space-3)}
+ #completion-dialog section{margin-top:var(--space-3)}
+}
+
+/* Exact supplied close asset; mask lets currentColor follow the device theme. */
+.close-icon{display:block;width:24px;height:24px;background:currentColor;mask:url("assets/cube-easy/close.svg") center / contain no-repeat}
+
+/* The completion notification intentionally stays light in both device themes. */
+#completion-dialog{--completion-surface:#fff;--completion-ink:#000;--completion-secondary:#fff;--completion-line:#ccc;--completion-primary:#242424;--completion-on-primary:#f2f2f2;--completion-track:#fff;--completion-progress:#2fc653;width:600px;color-scheme:light}
+#completion-dialog h2{font-size:28px;font-weight:500;line-height:1.2}
+.completion-story{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);align-items:start}
+#completion-dialog .completion-story p{margin:0;font-size:20px;line-height:1.2}
+.completion-camera{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:20px}
+#completion-dialog #completion-fund-amount{font-size:20px;font-weight:500}
+#completion-dialog #completion-fund-progress{border-color:#aad1ac;margin:8px 0 var(--space-3)}
+#completion-dialog #completion-support{font-size:20px;line-height:24px}
+.completion-or{display:flex;align-items:center;justify-content:center;gap:var(--space-xs);margin:8px 0;color:#808080;line-height:20px}
+.completion-or::before,.completion-or::after{content:"";width:44px;border-top:1px solid currentColor}
+#completion-dialog #completion-feedback{display:flex;align-items:center;justify-content:center;gap:var(--space-xs);margin:0;font-size:20px;color:#242424}
+.mail-icon{display:block;width:1lh;height:1lh;flex:0 0 1lh;background:#000;mask:url("assets/cube-easy/mail.svg") center / contain no-repeat}
+@media(max-width:680px){
+ #completion-dialog{width:calc(100% - max(16px, env(safe-area-inset-left)) - max(16px, env(safe-area-inset-right)))}
+ #completion-dialog h2{font-size:24px;margin-bottom:var(--space-3)}
+ .completion-story{gap:var(--space-3)}
+ #completion-dialog .completion-story p{font-size:16px;line-height:1.3}
+ .completion-camera{border-radius:16px}
+ #completion-dialog #completion-support,#completion-dialog #completion-feedback{font-size:16px}
+}

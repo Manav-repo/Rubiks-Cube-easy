@@ -25,7 +25,7 @@
  header #support-links a:nth-child(n)::after{content:none}
  header #support-links a::before{content:'';display:block;flex-shrink:0;width:32px;height:32px;background-position:center;background-size:contain;background-repeat:no-repeat;border-radius:8px}
  header #support-links a:first-child::before{background-image:url('assets/cube-easy/coffee.svg')}
- header #support-links a:nth-child(2)::before{background-color:#000;background-image:url('assets/cube-easy/x.svg');background-size:24px}
+ header #support-links a:nth-child(2)::before{background-color:#121212;background-image:url('assets/cube-easy/x.svg');background-size:24px}
  header #support-links a:nth-child(3)::before{background-image:url('assets/cube-easy/linkedin.png')}
  :root[data-theme=dark] header #support-links a:nth-child(3)::before{background-image:url('assets/cube-easy/linkedin-dark.png')}
  #settings-toggle{width:44px;height:44px;padding:10px;border:0;position:relative;border-radius:0;background:none}

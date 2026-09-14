@@ -10,11 +10,10 @@
  const header=document.querySelector('.header-right');
  const settings=document.getElementById('settings-toggle');
  function sync(){
-  const playback=mobile.matches&&document.body.classList.contains('playback');
+  const playback=!mobile.matches||document.body.classList.contains('playback');
   if(playback&&objective.parentElement!==workspace)workspace.prepend(objective);
   else if(!playback&&objective.parentNode!==objectiveSlot.parentNode)objectiveSlot.after(objective);
-  if(mobile.matches&&support.parentElement!==header)header.insertBefore(support,settings);
-  else if(!mobile.matches&&support.parentNode!==supportSlot.parentNode)supportSlot.after(support);
+  if(support.parentElement!==header)header.insertBefore(support,settings);
  }
  mobile.addEventListener('change',sync);
  new MutationObserver(sync).observe(document.body,{attributes:true,attributeFilter:['class']});

@@ -1,0 +1,854 @@
+[
+  {
+    "colorScheme": "light",
+    "stage": 0,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalFind a center, an edge, and a corner.",
+      "How many colors does an edge piece have?"
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 0,
+    "phase": "explore",
+    "heading": "Find a center.",
+    "body": [
+      "Your goalFind a center, an edge, and a corner.",
+      "Tap a sticker on the cube. Drag to peek around the sides."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 0,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Centers name each face. Edges have two colors. Corners have three.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 0,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 0,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "Centers name each face. Edges have two colors. Corners have three.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 0,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 1,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalWhite plus on the bottom. Side colors match their centers.",
+      "Where does the white-and-green edge belong?"
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 1,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalWhite plus on the bottom. Side colors match their centers.",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 1,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "An edge belongs between the two centers that match its colors.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 1,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 1,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "An edge belongs between the two centers that match its colors.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 1,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 2,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalThe whole white layer matches, including the sides.",
+      "What tells you where a corner belongs?"
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 2,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalThe whole white layer matches, including the sides.",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 2,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Lift, turn, and return puts a corner home and brings the cross back.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 2,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 2,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "Lift, turn, and return puts a corner home and brings the cross back.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 2,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 3,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalThe bottom two layers have matching side colors.",
+      "Which edge can go in the middle layer?"
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 3,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalThe bottom two layers have matching side colors.",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 3,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Move the edge aside, open its slot, and restore the white corner.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 3,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 3,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "Move the edge aside, open its slot, and restore the white corner.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 3,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 4,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalFour yellow edges face up. Corners can wait.",
+      "Which yellow pieces matter for the cross?"
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 4,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalFour yellow edges face up. Corners can wait.",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 4,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Open the front, work on the top, and close the front to protect the layers below.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 4,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 4,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "Open the front, work on the top, and close the front to protect the layers below.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 4,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 5,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalEach top corner has the right three neighbors.",
+      "Can a corner be in its home with yellow facing sideways?"
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 5,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalEach top corner has the right three neighbors.",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 5,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Three corners trade places while the finished layers come back together.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 5,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 5,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "Three corners trade places while the finished layers come back together.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 5,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 6,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalEvery face is one color. You did the thinking!",
+      "When the bottom looks mixed halfway through a trick, what helps?"
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 6,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalEvery face is one color. You did the thinking!",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 6,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Complete patterns restore what they temporarily move, while changing the pieces you need.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 6,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 6,
+    "phase": "badge",
+    "heading": "Look what you can do!",
+    "body": [
+      "Complete patterns restore what they temporarily move, while changing the pieces you need.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "light",
+    "stage": 6,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 0,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalFind a center, an edge, and a corner.",
+      "How many colors does an edge piece have?"
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 0,
+    "phase": "explore",
+    "heading": "Find a center.",
+    "body": [
+      "Your goalFind a center, an edge, and a corner.",
+      "Tap a sticker on the cube. Drag to peek around the sides."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 0,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Centers name each face. Edges have two colors. Corners have three.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 0,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 0,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "Centers name each face. Edges have two colors. Corners have three.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 0,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 1,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalWhite plus on the bottom. Side colors match their centers.",
+      "Where does the white-and-green edge belong?"
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 1,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalWhite plus on the bottom. Side colors match their centers.",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 1,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "An edge belongs between the two centers that match its colors.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 1,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 1,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "An edge belongs between the two centers that match its colors.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 1,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 2,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalThe whole white layer matches, including the sides.",
+      "What tells you where a corner belongs?"
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 2,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalThe whole white layer matches, including the sides.",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 2,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Lift, turn, and return puts a corner home and brings the cross back.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 2,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 2,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "Lift, turn, and return puts a corner home and brings the cross back.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 2,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 3,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalThe bottom two layers have matching side colors.",
+      "Which edge can go in the middle layer?"
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 3,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalThe bottom two layers have matching side colors.",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 3,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Move the edge aside, open its slot, and restore the white corner.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 3,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 3,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "Move the edge aside, open its slot, and restore the white corner.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 3,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 4,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalFour yellow edges face up. Corners can wait.",
+      "Which yellow pieces matter for the cross?"
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 4,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalFour yellow edges face up. Corners can wait.",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 4,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Open the front, work on the top, and close the front to protect the layers below.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 4,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 4,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "Open the front, work on the top, and close the front to protect the layers below.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 4,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 5,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalEach top corner has the right three neighbors.",
+      "Can a corner be in its home with yellow facing sideways?"
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 5,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalEach top corner has the right three neighbors.",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 5,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Three corners trade places while the finished layers come back together.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 5,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 5,
+    "phase": "badge",
+    "heading": "A new skill is yours.",
+    "body": [
+      "Three corners trade places while the finished layers come back together.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 5,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 6,
+    "phase": "predict",
+    "heading": "Think before you turn.",
+    "body": [
+      "Your goalEvery face is one color. You did the thinking!",
+      "When the bottom looks mixed halfway through a trick, what helps?"
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 6,
+    "phase": "explore",
+    "heading": "What will you try?",
+    "body": [
+      "Your goalEvery face is one color. You did the thinking!",
+      "Try a turn. Look at what moved. You can always undo it.",
+      "Green stays in front for the move names. Dragging only changes your view."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 6,
+    "phase": "explain",
+    "heading": "You found it!",
+    "body": [
+      "Complete patterns restore what they temporarily move, while changing the pieces you need.",
+      "Now make it stick.Try a fresh task from memory before you move on."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 6,
+    "phase": "review",
+    "heading": "A tiny memory break.",
+    "body": [
+      "Do you remember the first trick from “Meet your cube”?",
+      "Build it below. Try before asking for a peek."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 6,
+    "phase": "badge",
+    "heading": "Look what you can do!",
+    "body": [
+      "Complete patterns restore what they temporarily move, while changing the pieces you need.",
+      "You reached the goal and did it again without clues."
+    ]
+  },
+  {
+    "colorScheme": "dark",
+    "stage": 6,
+    "phase": "free",
+    "heading": "A little free play.",
+    "body": [
+      "This scramble was made with real turns. Try an idea and see what changes.",
+      "Your badges are safe. Return to your task when you’re ready."
+    ]
+  }
+]
