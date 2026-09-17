@@ -74,3 +74,10 @@
 #completion-dialog #feedback-form label{display:block;margin-bottom:var(--space-3)}
 #completion-dialog #feedback-form p{font-size:14px;margin:var(--space-3) 0}
 #completion-dialog #feedback-form button{min-height:44px;background:var(--completion-primary);color:var(--completion-on-primary)}
+/* Supplied LinkedIn artwork has transparent lettering: white backing fills “in”. */
+header #support-links a:nth-child(3)::before,
+:root[data-theme=dark] header #support-links a:nth-child(3)::before{background-image:url('assets/cube-easy/linkedin-white.png');background-color:#fff}
+/* Keep the desktop header available to switch panels without overlapping it. */
+@media(min-width:681px){
+ #completion-dialog,#feedback-dialog{top:calc(81px + var(--space-3));max-height:calc(100dvh - 81px - var(--space-3) - var(--space-4))}
+}

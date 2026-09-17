@@ -15,11 +15,11 @@
  const form=document.getElementById('feedback-form');
  const message=document.getElementById('feedback-message');
  const mobile=matchMedia('(max-width:680px)');
- const present=card=>mobile.matches?card.showModal():card.show();
+ const present=card=>CubePanels.open(card,mobile.matches);
  opener.addEventListener('click',()=>present(dialog));
- document.getElementById('feedback-close').addEventListener('click',()=>dialog.close());
+ document.getElementById('feedback-close').addEventListener('click',()=>CubePanels.close(dialog));
  dialog.addEventListener('cancel',event=>event.preventDefault());
- dialog.addEventListener('close',()=>{const parent=document.getElementById('completion-dialog');if(parent.open)document.getElementById('completion-feedback').focus();else opener.focus();});
+ dialog.addEventListener('close',()=>{if(!CubePanels.active)document.getElementById('settings-toggle').focus();});
  message.addEventListener('input',()=>message.setCustomValidity(''));
  form.addEventListener('submit',event=>{
   event.preventDefault();
@@ -64,7 +64,7 @@
    clearTimeout(timer);
    timer=setTimeout(()=>{
     timer=null;
-    if(!complete()||document.hidden||document.querySelector('dialog[open]')||coolingDown())return;
+    if(!complete()||document.hidden||CubePanels.active||coolingDown())return;
     shown=true;
     try{localStorage.setItem(key,String(Date.now()));}catch{}
     returnFocus=document.activeElement;
@@ -75,9 +75,10 @@
  }
  new MutationObserver(observeCompletion).observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['class','disabled']});
  document.addEventListener('visibilitychange',observeCompletion);
- document.getElementById('completion-close').addEventListener('click',()=>completion.close());
+ document.getElementById('completion-close').addEventListener('click',()=>CubePanels.close(completion));
  completion.addEventListener('cancel',event=>event.preventDefault());
- completion.addEventListener('close',()=>{if(completion.open)return;restoreCompletion();if(returnFocus?.isConnected&&!returnFocus.disabled)returnFocus.focus();});
+ completion.addEventListener('panelclosed',restoreCompletion);
+ completion.addEventListener('close',()=>{if(!CubePanels.active&&returnFocus?.isConnected&&!returnFocus.disabled)returnFocus.focus();});
  document.getElementById('completion-feedback').addEventListener('click',()=>{
   completion.style.height=completion.getBoundingClientRect().height+'px';
   completionContent.forEach(el=>el.hidden=true);
@@ -88,6 +89,6 @@
  });
  // A viewport change must also remove/add native modality, not just move the box.
  mobile.addEventListener('change',()=>{
-  for(const card of [completion,dialog])if(card.open){card.close();present(card);}
+  for(const card of [completion,dialog])if(card.open)CubePanels.reflow(card,mobile.matches);
  });
 })();

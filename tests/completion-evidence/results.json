@@ -3,7 +3,7 @@
     "width": 375,
     "height": 667,
     "colorScheme": "light",
-    "sourceHash": "fc0fd3490e3f6462406c61f6378cfd4193e56ac970ce9f42d667a4d2e5c03675",
+    "sourceHash": "5ac41d737f1f76bd3684e45a7a96db0ef84121afd29dcfb03c2fbbc3c3a10b23",
     "measurements": {
       "card": {
         "x": 16,
@@ -60,7 +60,7 @@
     "width": 375,
     "height": 667,
     "colorScheme": "dark",
-    "sourceHash": "fc0fd3490e3f6462406c61f6378cfd4193e56ac970ce9f42d667a4d2e5c03675",
+    "sourceHash": "5ac41d737f1f76bd3684e45a7a96db0ef84121afd29dcfb03c2fbbc3c3a10b23",
     "measurements": {
       "card": {
         "x": 16,
@@ -117,7 +117,7 @@
     "width": 390,
     "height": 844,
     "colorScheme": "light",
-    "sourceHash": "fc0fd3490e3f6462406c61f6378cfd4193e56ac970ce9f42d667a4d2e5c03675",
+    "sourceHash": "5ac41d737f1f76bd3684e45a7a96db0ef84121afd29dcfb03c2fbbc3c3a10b23",
     "measurements": {
       "card": {
         "x": 16,
@@ -174,7 +174,7 @@
     "width": 390,
     "height": 844,
     "colorScheme": "dark",
-    "sourceHash": "fc0fd3490e3f6462406c61f6378cfd4193e56ac970ce9f42d667a4d2e5c03675",
+    "sourceHash": "5ac41d737f1f76bd3684e45a7a96db0ef84121afd29dcfb03c2fbbc3c3a10b23",
     "measurements": {
       "card": {
         "x": 16,
@@ -231,7 +231,7 @@
     "width": 360,
     "height": 800,
     "colorScheme": "light",
-    "sourceHash": "fc0fd3490e3f6462406c61f6378cfd4193e56ac970ce9f42d667a4d2e5c03675",
+    "sourceHash": "5ac41d737f1f76bd3684e45a7a96db0ef84121afd29dcfb03c2fbbc3c3a10b23",
     "measurements": {
       "card": {
         "x": 16,
@@ -288,7 +288,7 @@
     "width": 360,
     "height": 800,
     "colorScheme": "dark",
-    "sourceHash": "fc0fd3490e3f6462406c61f6378cfd4193e56ac970ce9f42d667a4d2e5c03675",
+    "sourceHash": "5ac41d737f1f76bd3684e45a7a96db0ef84121afd29dcfb03c2fbbc3c3a10b23",
     "measurements": {
       "card": {
         "x": 16,
@@ -345,39 +345,39 @@
     "width": 1280,
     "height": 900,
     "colorScheme": "light",
-    "sourceHash": "fc0fd3490e3f6462406c61f6378cfd4193e56ac970ce9f42d667a4d2e5c03675",
+    "sourceHash": "5ac41d737f1f76bd3684e45a7a96db0ef84121afd29dcfb03c2fbbc3c3a10b23",
     "measurements": {
       "card": {
         "x": 656,
-        "y": 24,
+        "y": 97,
         "width": 600,
         "height": 474.09375,
         "right": 1256,
-        "bottom": 498.09375
+        "bottom": 571.09375
       },
       "support": {
         "x": 680,
-        "y": 338.09375,
+        "y": 411.09375,
         "width": 552,
         "height": 56,
         "right": 1232,
-        "bottom": 394.09375
+        "bottom": 467.09375
       },
       "feedback": {
         "x": 680,
-        "y": 430.09375,
+        "y": 503.09375,
         "width": 552,
         "height": 44,
         "right": 1232,
-        "bottom": 474.09375
+        "bottom": 547.09375
       },
       "img": {
         "x": 832.5,
-        "y": 354.09375,
+        "y": 427.09375,
         "width": 24,
         "height": 24,
         "right": 856.5,
-        "bottom": 378.09375
+        "bottom": 451.09375
       },
       "lineHeight": 24,
       "gap": "4px",
@@ -402,39 +402,39 @@
     "width": 1280,
     "height": 900,
     "colorScheme": "dark",
-    "sourceHash": "fc0fd3490e3f6462406c61f6378cfd4193e56ac970ce9f42d667a4d2e5c03675",
+    "sourceHash": "5ac41d737f1f76bd3684e45a7a96db0ef84121afd29dcfb03c2fbbc3c3a10b23",
     "measurements": {
       "card": {
         "x": 656,
-        "y": 24,
+        "y": 97,
         "width": 600,
         "height": 474.09375,
         "right": 1256,
-        "bottom": 498.09375
+        "bottom": 571.09375
       },
       "support": {
         "x": 680,
-        "y": 338.09375,
+        "y": 411.09375,
         "width": 552,
         "height": 56,
         "right": 1232,
-        "bottom": 394.09375
+        "bottom": 467.09375
       },
       "feedback": {
         "x": 680,
-        "y": 430.09375,
+        "y": 503.09375,
         "width": 552,
         "height": 44,
         "right": 1232,
-        "bottom": 474.09375
+        "bottom": 547.09375
       },
       "img": {
         "x": 832.5,
-        "y": 354.09375,
+        "y": 427.09375,
         "width": 24,
         "height": 24,
         "right": 856.5,
-        "bottom": 378.09375
+        "bottom": 451.09375
       },
       "lineHeight": 24,
       "gap": "4px",
