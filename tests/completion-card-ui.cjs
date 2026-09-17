@@ -1,12 +1,19 @@
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),cp=require('node:child_process'),crypto=require('node:crypto');
 const out='tests/completion-evidence';fs.mkdirSync(out,{recursive:true});
-const files=['dist/index.html','dist/desktop-design.css','dist/js/mobile-presentation.js','dist/feedback.css','dist/mobile-design.css','dist/js/feedback.js','dist/js/support.js'];
+const files=['dist/js/panels.js','dist/index.html','dist/desktop-design.css','dist/js/mobile-presentation.js','dist/feedback.css','dist/mobile-design.css','dist/js/feedback.js','dist/js/support.js'];
 const fingerprint=()=>crypto.createHash('sha256').update(files.map(f=>fs.readFileSync(f)).join('')).digest('hex');
 const sourceHash=fingerprint();
 // The desktop copy release changes only these four presentation assignments.
 const withoutCopy=s=>s.split('\n').filter(l=>!['painter-title','painter-intro','stage-label','stage-subtitle'].some(id=>l.includes("$('"+id+"').textContent="))).join('\n');
-assert.equal(withoutCopy(fs.readFileSync('dist/js/app.js','utf8')),withoutCopy(cp.execFileSync('git',['show','a076727:dist/js/app.js'],{encoding:'utf8'})),'non-copy application code unchanged');
+// Permit only the audited panel routing substitutions, retaining all game code.
+const priorApp=cp.execFileSync('git',['show','31974d4:dist/js/app.js'],{encoding:'utf8'});
+const routedApp=priorApp.replace("$('settings').hidden=!$('settings').hidden;$('settings-toggle').setAttribute('aria-expanded',!$('settings').hidden);","if(CubePanels.active===$('settings'))CubePanels.close();else CubePanels.open($('settings'));")
+.replaceAll('dialog.close();','CubePanels.close(dialog);')
+.replace("$('settings').hidden=true;$('settings-toggle').setAttribute('aria-expanded','false');",'')
+.replace("if(!$('calibration').open)$('calibration').showModal();","CubePanels.open($('calibration'),true);");
+assert.equal(fs.readFileSync('dist/js/app.js','utf8'),routedApp,'only audited panel routing changed');
+
 for(const f of ['dist/js/cube-view.js','dist/js/layout.js','dist/js/lessons.js','dist/js/stage-planner.js','dist/js/solver-worker.js','dist/vendor/cube.js','dist/js/theme.js'])assert.equal(fs.readFileSync(f,'utf8'),cp.execFileSync('git',['show',`a076727:${f}`],{encoding:'utf8'}),f+' unchanged');
 assert.deepEqual(fs.readFileSync('dist/assets/cube-easy/coffee.svg'),fs.readFileSync('Assests/Buy me coffee.svg'));
 assert.deepEqual(fs.readFileSync('dist/assets/cube-easy/close.svg'),fs.readFileSync('Assests/x close.svg'));

@@ -4,6 +4,7 @@ const vm=require('node:vm'),fs=require('node:fs'),assert=require('node:assert/st
 class Node{constructor(){this.style={setProperty(){}};this.classList={toggle(){}};this.checked=false;this.hidden=false;this.innerHTML='';this.open=false;this.value='';}setAttribute(){}addEventListener(){}showModal(){this.open=true;}close(){this.open=false;}scrollIntoView(){} }
 const nodes=new Map(),storage={};
 const context=vm.createContext({console,setTimeout,clearTimeout,matchMedia:()=>({matches:false}),document:{getElementById:id=>{if(!nodes.has(id))nodes.set(id,new Node());return nodes.get(id);},querySelectorAll:()=>[],body:new Node(),documentElement:new Node()},window:{addEventListener(){},renderSupport(){}},localStorage:{getItem:k=>storage[k]||null,setItem:(k,v)=>storage[k]=v},CubeTheme:{isDark:()=>false,set(){}},CubeView:class{render(){}reset(){}async turn(c,m){c.move(m);}},Worker:class{postMessage(){}terminate(){}}});
+context.CubePanels={open(panel){panel.showModal();},close(panel){panel.close();}};
 context.window=context;context.renderSupport=()=>{};context.addEventListener=()=>{};
 for(const file of ['vendor/cube.js','js/layout.js','js/lessons.js','js/app.js'])vm.runInContext(fs.readFileSync('dist/'+file,'utf8'),context);
 const run=s=>vm.runInContext(s,context);let checks=0;
